@@ -1,0 +1,65 @@
+<?php echo $this->doctype('XHTML1_RDFA'); ?>
+<html lang="vi">
+    <head>
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+        <?php echo $this->headLink() ?>
+        <?php echo $this->headScript() ?>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logoVMT"><a href="https://inest.hust.edu.vn/trang-chu"><img src="../images/inest.png"></a></div>
+                    <div class="navbar-brand">
+                    <p>
+                        <?php 
+                            echo $GLOBALS['firstname'] . ' ' . $GLOBALS['lastname'];
+                        ?>
+                        
+                    </p>
+                    <a href="https://re-env2017.hust.edu.vn/home">
+                        RC-EnvE2017
+                    </a></div>
+                   
+                    <div class="timeVMT">
+                        <?php 
+                            echo "Server Time: " . date("d-M-Y h:i:s");
+                        ?>
+                    </div>
+                    <ul class="pull-right accVMT">
+                        <li><a href="/user/edit">My Profile</a></li>
+                        <li><a href="/user/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row wrap-content" data-controller="<?php echo $GLOBALS['controller'] ?>">
+                <div class="col-md-12">
+                    <?php echo $this->layout()->content ?>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" role="contentinfo" class="text-center">
+        <div id="wrapper-footer" class="container" style="padding-top: 20px;">
+            <div class="footer-menu" style="margin-bottom: 20px;">
+                <ul>
+                    <li style="width: 300px; margin-right: 20px;"><a class="img-responsive" href="http://www.seed-net.org/" target="_blank"><img src="../images/jica.png" /></a></li>
+                    <li style="width: 65px; margin-right: 20px;"><a class="img-responsive" href="https://www.hust.edu.vn/" target="_blank"><img src="../images/bk.png" /></a></li>
+                    <li style="width: 100px; margin-right: 20px;"><a class="img-responsive" href="http://www.kyoto-u.ac.jp/en" target="_blank"><img src="../images/kyoto.png" /></a></li>
+                    <li style="width: 100px"><a class="img-responsive" href="https://inest.hust.edu.vn/trang-chu" target="_blank"><img src="../images/inest.png" /></a></li>     
+                </ul>
+            </div>
+            <div class="footer-text">
+                <p>INEST © Copyright 2017 | All Rights Reserved</p>         
+            </div>                  
+        </div>
+    </footer>
+    </body>
+</html>

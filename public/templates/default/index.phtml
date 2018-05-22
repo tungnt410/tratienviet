@@ -1,0 +1,67 @@
+<?php echo $this->doctype('XHTML1_RDFA'); ?>
+<html lang="vi">
+<head>
+	<?php echo $this->headTitle() ?>
+	<?php echo $this->headMeta() ?>
+	<?php echo $this->headLink() ?>
+	<?php echo $this->headScript() ?>
+	<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+	<script>tinymce.init({ selector:'textarea' });</script>
+</head>
+<body>
+	<div class="container-fluid banNer">
+		<div class="container">
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<h2>TRẢ TIỀN VIỆT</h2>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="menu">
+		<div class="container navbar navbar-default">
+			<ul class="nav navbar-nav ">
+				<li class="dropdown"><a class="dropdown-toggle" href="/">HOME</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" href="/">CONTACT US</a></li>
+			</ul>
+			<div class="text-right accVMT">
+				<ul class=" ">
+					<?php if($_SESSION['type'] == 2 || $_SESSION['type'] == 1){ ?>
+					<li><a href="/user/edit"><strong><?php echo $GLOBALS['name']; ?></strong></a></li>
+					<li>/</li>
+					<li> <a href="/admin/control">Quản trị</li></a>
+					<li>/</li>
+					<li><a href="/user/logout">Đăng xuất</a></li>                            
+					<?php } elseif ($_SESSION['type'] != NULL && $_SESSION['type'] == 0) { ?>
+					<li><a href="/user/edit"><strong><?php echo $GLOBALS['name']; ?></strong></a></li> 
+					<li>/</li>
+					<li><a href="/user/logout">Đăng xuất</a></li>
+					<?php
+				} else { ?>                           
+				<li><a href="/user/login">Đăng nhập</a></li>
+				<li>/</li>
+				<li><a href="/user/signup">Đăng ký</a></li>
+				<?php
+			}
+			?>                                          
+		</ul> 
+	</div> 
+</div>
+</div>
+<div class="container-fluid">
+	<?php echo $this->layout()->content ?>
+</div>
+<div id="footer" class="container-fluid" style="height: 100px;"> 
+	<div class="container">
+		<div class="pull-left " style="padding: 0 30px;">
+			<span>TraTienViet</span><br>
+        <!-- <span>104-C10, HUST, No. 1 Dai Co Viet street, Hanoi city, Vietnam</span><br>
+        	<span>Tel: 0123 45 67 89 - Email: <a href="mailto:contact@vase.com.vn">contact@vase.com.vn</a></span>     -->
+        </div>                  
+    </div>
+</div>        
+</body>
+</html>

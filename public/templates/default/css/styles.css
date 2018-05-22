@@ -1,0 +1,75 @@
+.container-fluid { background-color: #f2f2f2; padding-left: 0; padding-right: 0; }
+.container { padding: 0; }
+.container-products{border: 1px solid #d7d7d7; background-color: #fff; padding: 20px; overflow: hidden; margin-top: 20px; margin-bottom: 20px;}
+.container-products h2{font-size: 22px; font-weight: 700; color: #141414; margin: 0; text-transform: uppercase; line-height: 26px; padding: 15px;}
+.container-products .doiTac{padding: 20px;}
+.navbar-inverse, #menu { background-color: #007EC3; border-color: #FFF; }
+.navbar-inverse .navbar-brand { color: #333; }
+.zf-green { color: #68b604; }
+.banNer { background: #FFF; }
+.banNer .navbar-header { height: 120px; }
+.navbar { margin-bottom: 0 !important; border: none !important; }
+.btn-success { background-color: #57a900; background-image: -moz-linear-gradient(top, #70d900, #57a900); background-image: -ms-linear-gradient(top, #70d900, #57a900); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900)); background-image: -webkit-linear-gradient(top, #70d900, #57a900); background-image: -o-linear-gradient(top, #70d900, #57a900); background-image: linear-gradient(top, #70d900, #57a900); filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0); }
+.productHome .image img { height: auto; position: absolute; top: 50%; left: 50%; width: 100%; transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); }
+.productHome .image { width: 100%; height: 150px; overflow: hidden; position: relative; margin-left: auto; margin-right: auto; }
+.productHome { margin-bottom: 30px; }
+.productHome:hover{-webkit-transition: box-shadow .25s; transition: box-shadow .25s; box-shadow: 0 2px 2px 0 rgba(0,0,0,.2), 0 4px 15px 0 rgba(0,0,0,.19)}
+.contentProduct { position: relative; border: 1px solid #e1e1e1; background-color: #fff; border-radius: 2px; }
+.sumProduct { padding: 10px; position: relative; }
+.sumProduct .price { text-transform: uppercase; color: #252525; margin-top: 10px; margin-bottom: 0; }
+.infoProduct { border-bottom: 1px solid #eee; padding-bottom: 5px; }
+.infoProduct .description { font-size: 15px; color: #888; margin: 0; }
+.btn-success:hover, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] { background-color: #57a900; }
+.wrap-content { min-height: 300px; background-color: white; margin-top: 30px; }
+td.id { display: none; }
+.message-required { color: red; }
+.search .form-horizontal { overflow: hidden; }
+.search .show-less { height: 40px; }
+.info-pattern { display: none; }
+.error-notifice { color: red; }
+.syn-result, .progress-syn { display: none; }
+body { font-family: Arial; font-size: 16px; }
+.navbar-brand { padding: 20px 0 0 165px; float: left; }
+.timeVMT { padding: 30px 0 0 150px; float: left; color: #FFF; }
+.accVMT { margin-top: 10px; }
+.accVMT li { display: inline-block; margin-right: 3px; }
+.accVMT li a, .timeVMT span { color: #ffeb00; }
+.navbar-brand a { color: #ff8a00; }
+.copyRight li { display: inline-block; }
+.mauXanh { color: #FFF; background: #003989; }
+.mauXanh th { text-align: center; }
+.contentVMT .select-file { display: none; }
+.taiLieu { padding-left: 2px; }
+.taiLieu li { display: inline-block; }
+img { max-width: 100% !important; }
+#footer { background: #007EC3; color: #FFF; }
+#footer a { color: #FFF; }
+#footer .footer-menu ul { margin: 0; padding: 0; list-style: none; text-align: center; }
+#footer .footer-menu ul li { display: inline-block; }
+#menu .navbar-default { background-color: #007EC3; font-size: 18px; z-index: 999; font-family: Arial; text-transform: uppercase; border-radius: 0; min-height: 45px; }
+#menu .navbar-nav { float: left; margin: 0; padding: 0; list-style-type: none; z-index: 1; }
+#menu .dropdown { border-left: 1px solid #ccc; }
+#menu .dropdown a span { color: #000; }
+#menu .dropdown:first-child { border-left: none; }
+#menu .dropdown-menu { display: none; position: absolute; width: 250px; padding: 0; text-transform: none; }
+#menu .dropdown-menu li { margin-left: 0; display: block; font-size: 16px; border-bottom: 1px solid silver; background: #FFF; }
+#menu .dropdown-menu > li > a, #menu .dropdown-menu li { color: #FFF; padding: 7px 6px; }
+#menu .navbar-nav li:hover .dropdown-menu { display: block; }
+#menu .navbar-nav .dropdown:hover, #menu .navbar-nav .dropdown a:hover { color: #FFF; text-decoration: underline; }
+#menu .navbar-nav .dropdown-menu li:hover, #menu .navbar-nav .dropdown-menu li a:hover { color: #FFF; background-color: #007EC3; text-decoration: underline; }
+#menu .dropdown-toggle { padding: 12px 25px; color: #FFF; }
+.contentBox { border: 1px solid #ccc; margin-bottom: 15px; }
+.headerTab { text-align: center; color: #333; border-bottom: 3px solid #ff7e00; text-transform: uppercase; font-weight: bold; padding: 10px 0 0 0; margin-bottom: 10px; font-size: 20px; }
+.contentRow { padding: 20px 15px 15px 15px; }
+.createDate { color: rgba(0, 57, 137, 0.7); font-size: 14px; }
+.assetContent a { display: block; font: 14px Arial, Helvetica, sans-serif; color: #232323; line-height: 18px; padding-bottom: 8px; }
+.assetContent a:hover { color: #003989; }
+.contentTab li { list-style: none; border-bottom: 1px dashed #cf2429; margin-bottom: 8px; }
+.contentTab ul { padding: 0; margin-left: 20px; margin-right: 5px; }
+.contentColum { padding-right: 30px; }
+.contentColum span { font-family: arial !important; font-size: 14px !important; }
+.dateLink { font-size: 14px; margin-left: 15px; }
+.medium-editor-insert-plugin { display: block; width: 100%; height: 100%; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; color: #555; background-color: #fff; background-image: none; border: 1px solid #444; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
+.tableCate { width: 100%; }
+.tableCate tr td { overflow: -webkit-paged-y; max-height: 150px; }
+.medium-editor-insert-plugin .medium-insert-buttons button { color: #222; border: 2px solid #222; }

@@ -1,0 +1,1298 @@
+USER INFO
+-------
+First name	 Super
+Last name	 Admin
+Persional website	 
+Organization	 HUST
+Phone number	 
+First address	 Ha Noi
+Second address	 
+City	 Ha Noi
+Postcode	 100000
+Country	 Viet Nam
+Email	 tungnt410@gmail.com
+-------
+First name	 Admin
+Last name	 Test
+Persional website	 
+Organization	 HUST
+Phone number	 
+First address	 Ha Noi
+Second address	 
+City	 Ha Noi
+Postcode	 100000
+Country	 Vietnam
+Email	 tung.nguyenthanh1@hust.edu.vn
+-------
+First name	 Admin
+Last name	 MMMS
+Persional website	 
+Organization	 HUST
+Phone number	 
+First address	 Ha Noi
+Second address	 
+City	 Ha Noi
+Postcode	 100000
+Country	 Vietnam
+Email	 mmms@hust.edu.vn
+-------
+First name	 Minh
+Last name	 Nguyen Thi Hong
+Persional website	 hust.edu.vn
+Organization	 Hanoi University of Science and Technology
+Phone number	 0982837465
+First address	 School of Mechanical Engineering
+Second address	 1 Dai Co Viet, Hai Ba Trung disttrict
+City	 Hanoi
+Postcode	 10000
+Country	 Vietnam
+Email	 minh.nguyenthihong@hust.edu.vn
+-------
+First name	 Minh
+Last name	 Nguyen T H
+Persional website	 
+Organization	 HUST
+Phone number	 
+First address	 1 Dai Co Viet
+Second address	 
+City	 Hanoi
+Postcode	 100000
+Country	 Vietnam
+Email	 thihongminh.nguyen@gmail.com
+-------
+First name	 Admin
+Last name	 Test
+Persional website	 
+Organization	 HUST
+Phone number	 
+First address	 Ha Noi
+Second address	 
+City	 Ha Noi
+Postcode	 100000
+Country	 Vietnam
+Email	 ann130313@gmail.com
+-------
+First name	 Poison
+Last name	 Ivy
+Persional website	 
+Organization	 HUST
+Phone number	 
+First address	 1 Dai Co Viet
+Second address	 
+City	 Hanoi
+Postcode	 100000
+Country	 Vietnam
+Email	 thktud@gmail.com
+-------
+First name	 Duc-Toan
+Last name	 Nguyen
+Persional website	 https://scholar.google.com.vn/citations?user=U24QtPgAAAAJ&hl=vi
+Organization	 Hanoi University of Science and Technology 
+Phone number	 
+First address	 No. 1 Dai Co Viet street, C1-226
+Second address	 
+City	 Hanoi
+Postcode	 10000
+Country	 Vietnam
+Email	 toan.nguyenduc@hust.edu.vn
+-------
+First name	 Test
+Last name	 Reviewer
+Persional website	 
+Organization	 HUST
+Phone number	 
+First address	 VN
+Second address	 
+City	 VN
+Postcode	 10000
+Country	 VN
+Email	 tungnt510@gmail.com
+-------
+First name	 Gia-Hai
+Last name	 Vuong
+Persional website	 
+Organization	 The University of Hai Phong
+Phone number	 986392976
+First address	 The University of Hai Phong, Department of Mechatronic Engineering, Building C6, Room 101, 171- Phan Dang Luu - Kien An - Hai Phong - Vietnam
+Second address	 
+City	 Hai Phong
+Postcode	 16000
+Country	 Việt Nam
+Email	 vuonghai84@gmail.com
+-------
+First name	 Quy
+Last name	 Hoang Van
+Persional website	 
+Organization	 Hai Phong University
+Phone number	 +84983692190
+First address	 5/25/40 Lach Tray Street - Ngo Quyen District - Hai Phong City
+Second address	 
+City	 Hai Phong
+Postcode	 180000
+Country	 Viet Nam
+Email	 hoangquyctm@gmail.com
+-------
+First name	 Long
+Last name	 Banh Tien
+Persional website	 
+Organization	 VASE
+Phone number	 
+First address	 1 Dai Co Viet
+Second address	 
+City	 Hanoi
+Postcode	 1000
+Country	 Vietnam
+Email	 long.banhtien@hust.edu.vn
+-------
+First name	 LanPhuong
+Last name	 Nguyen
+Persional website	 
+Organization	 Hanoi University of Science and Technology
+Phone number	 
+First address	 No. 1 Dai Co Viet Road
+Second address	 
+City	 Hanoi
+Postcode	 +84
+Country	 Vietnam
+Email	 phuong.nguyenlan@hust.edu.vn
+-------
+First name	 Tuan
+Last name	 Le Anh
+Persional website	 
+Organization	 School of Transportation Engineering, Hanoi University of Science and Technology
+Phone number	 
+First address	 NO.1, Dai Co Viet Road
+Second address	 
+City	 Hanoi
+Postcode	 0084
+Country	 Vietnam
+Email	 tuan.leanh05@gmail.com
+-------
+First name	 THANH NGHI
+Last name	 NGO
+Persional website	 
+Organization	 LS2N, Ecole Centrale de Nantes
+Phone number	 +33753417894
+First address	 35 rue de la Bourgeonniere
+Second address	 APT 1226
+City	 NANTES
+Postcode	 44300
+Country	 France
+Email	 Thanhnghi.Ngo@ls2n.fr
+-------
+First name	 trung kien
+Last name	 vi 
+Persional website	 https://www.facebook.com/vi.trungkien
+Organization	 Chung Cheng University
+Phone number	 914863969
+First address	 Chung cheng University - Chayi- Taiwan
+Second address	 Khoa Co Dien - Truong Dai Hoc Lac Hong - Bien Hoa - Dong Nai
+City	 bac kan
+Postcode	 84
+Country	 Vietnam
+Email	 vitrungkien@gmail.com
+-------
+First name	 Duy-Liem
+Last name	 Nguyen
+Persional website	 
+Organization	 Ho Chi Minh City University of Technology and Education
+Phone number	 913171844
+First address	 01 Vo Van Ngan Street, Thu Duc District
+Second address	 
+City	 Ho Chi Minh
+Postcode	 700000
+Country	 Vietnam
+Email	 liemnd@hcmute.edu.vn
+-------
+First name	 Tran
+Last name	 Tu
+Persional website	 
+Organization	 Ho Chi Minh university of technology HCMUT
+Phone number	 1659282172
+First address	 268 ly thuong kiet street, ward 14, district 10
+Second address	 
+City	 Ho chi Minh City
+Postcode	 700000
+Country	 Việt Nam
+Email	 trantu.hcmus@gmail.com
+-------
+First name	 Nga
+Last name	 Pham Thi Hong
+Persional website	 
+Organization	 HCMC University of Technology and Education
+Phone number	 094 869 1160
+First address	 No 1 Vo Van Ngan Street, Linh Chieu Ward, Thu Duc District, Ho Chi Minh City
+Second address	 
+City	 Hochiminh
+Postcode	 700000 
+Country	 Vietnam
+Email	 hongnga@hcmute.edu.vn
+-------
+First name	 Van Thuan
+Last name	 Nguyen
+Persional website	 http://www.ntu.edu.vn/khoaktgt/vi-vn/bộmôn/kỹthuậtôtô/tthuan.aspx
+Organization	 Nha Trang University
+Phone number	 (+84) 1693007896
+First address	 Faculty of Transportation Engineering, Nha Trang University, 02 Nguyen Dinh Chieu St. Nha Trang City, Khanh Hoa, Vietnam
+Second address	 97/4 Mai Xuan Thuong, Vinh Hai, Khanh Hoa, Nha Trang, Viet Nam
+City	 Nha Trang
+Postcode	 650000
+Country	 Viet Nam
+Email	 thuannv@ntu.edu.vn
+-------
+First name	 Nam
+Last name	 Nguyen Duong
+Persional website	 
+Organization	 Viet Nam Maritime University
+Phone number	 0934315317
+First address	 School of Mechanical Engineering Viet Nam Maritime University; Room 705 - A6 building - 484 Lach Tray - Ngo Quyen - Hai Phong - Viet Nam
+Second address	 
+City	 Hai Phong
+Postcode	 +84225
+Country	 Vietnam
+Email	 namnd.khcs@vimaru.edu.vn
+-------
+First name	 Tran 
+Last name	 Dang Quoc
+Persional website	 
+Organization	 Hanoi University of Science and Technology
+Phone number	 (+84)0963915476
+First address	 No. 1 Dai Co Viet Street
+Second address	 Hai Ba Trung District
+City	 Hanoi
+Postcode	 024
+Country	 Việt Nam
+Email	 quoc.trandang@hust.edu.vn
+-------
+First name	 Chỉnh
+Last name	 Nguyễn Duy
+Persional website	 
+Organization	 Hanoi University of Mining and Geology
+Phone number	 
+First address	 Department of Mechanical Engineering
+Second address	 
+City	 Hanoi
+Postcode	 +84
+Country	 Vietnam
+Email	 chinhck.cd@gmail.com
+-------
+First name	 Huynh
+Last name	 Nguyen Ngoc Tri
+Persional website	 
+Organization	 Ho Chi Minh City University of Technology - VNU - HCM 
+Phone number	 0944019686
+First address	 268 Ly Thuong Kiet Street, District 10, Ho Chi Minh City, Vietnam
+Second address	 
+City	 Ho Chi Minh
+Postcode	 700000
+Country	 Vietnam
+Email	 nnthuynh@hcmut.edu.vn
+-------
+First name	 Bích
+Last name	 Mạc
+Persional website	 
+Organization	 Đại học sư phạm kỹ thuật Hưng Yên
+Phone number	 0904128656
+First address	 Dân Tiến, Khoái Châu
+Second address	 
+City	 Hưng Yên
+Postcode	 Hưng Yên
+Country	 Việt Nam
+Email	 bich.utehy@gmail.com
+-------
+First name	 Thi Ai Lanh
+Last name	 Nguyen
+Persional website	 
+Organization	 The University of Danang - School of Technology
+Phone number	 0084962731041
+First address	 48B Cao Thang
+Second address	 
+City	 Da Nang
+Postcode	 551580
+Country	 Viet Nam
+Email	 ntalanh@dct.udn.vn
+-------
+First name	 Pham
+Last name	 Quoc Tuan
+Persional website	 
+Organization	 Kyungpook National University
+Phone number	 +82539505580
+First address	 80 Daehaklo, Bukgu
+Second address	 
+City	 Daegu
+Postcode	 41566
+Country	 South Korea
+Email	 tuanphamquoc@knu.ac.kr
+-------
+First name	 NGUYEN
+Last name	 THANH CONG
+Persional website	 
+Organization	 University of Transport and Communications
+Phone number	 983555685
+First address	 NO.3 CAU GIAY STREET, DONG DA DISTRICT
+Second address	 NO.706 A6 DAI HOC GIAO THONG VAN TAI
+City	 HANOI
+Postcode	 84
+Country	 Vietnam
+Email	 congnt@utc.edu.vn
+-------
+First name	 
+Last name	 
+Persional website	 
+Organization	 
+Phone number	 
+First address	 
+Second address	 
+City	 
+Postcode	 
+Country	 
+Email	 
+-------
+First name	 THE NAM
+Last name	 TRAN
+Persional website	 
+Organization	 VIETNAM MARITIME UNIVERSITY
+Phone number	 901588977
+First address	 484 Lach Tray Street
+Second address	 
+City	 Haiphong
+Postcode	 0225
+Country	 Vietnam
+Email	 thenam@vimaru.edu.vn
+-------
+First name	 Trung Kien
+Last name	 Hoang
+Persional website	 
+Organization	 Ho Chi Minh City University of Technology and Education
+Phone number	 906128993
+First address	 No.1 Vo Van Ngan Street, Thu Duc District
+Second address	 
+City	 Ho Chi Minh
+Postcode	 720-217
+Country	 Vietnam
+Email	 kienhtr@hcmute.edu.vn
+-------
+First name	 Ngoc-Tuan
+Last name	 VU
+Persional website	 
+Organization	 Le Quy Don University
+Phone number	 0904193687
+First address	 236 Hoang Quoc Viet
+Second address	 Co Nhue 1 
+City	 Ha Noi
+Postcode	 084
+Country	 Viet Nam
+Email	 tuan.vungoc@lqdtu.edu.vn
+-------
+First name	 Thien Ngon
+Last name	 Dang
+Persional website	 
+Organization	 HCM City University of Technology and Education
+Phone number	 (+84) 913804803
+First address	 No. 1 Vo Van Ngan Street, Linh Chieu Ward, Thu Duc District
+Second address	 
+City	 Ho Chi Minh
+Postcode	 700000
+Country	 Vietnam
+Email	 ngondt@hcmute.edu.vn
+-------
+First name	 Bui
+Last name	 Binh
+Persional website	 
+Organization	 Hanoi University of Science and Technology
+Phone number	 84964919344
+First address	 Tay Son Street, Phung Town, Dan Phuong District
+Second address	 
+City	 Hanoi
+Postcode	 100000
+Country	 Vietnam
+Email	 binhbv89@gmail.com
+-------
+First name	 Ai
+Last name	 Ho
+Persional website	 
+Organization	 Can Tho University
+Phone number	 1682726732
+First address	 3/2 Street, Can Tho City
+Second address	 
+City	 Can Tho
+Postcode	 +84
+Country	 VietNam
+Email	 hothithuai2014@gmail.com
+-------
+First name	 Thai Hung
+Last name	 Le
+Persional website	 
+Organization	 HUST
+Phone number	 
+First address	 N1 Dai Co Viet Street, Hanoi
+Second address	 
+City	 Hanoi
+Postcode	 0084
+Country	 Vietnam
+Email	 hung.lethai@hust.edu.vn
+-------
+First name	 Van Hai
+Last name	 Dinh
+Persional website	 
+Organization	 Ha Noi University of Science and Technology
+Phone number	 +94 902158808
+First address	 105 C1 Building, Hanoi University of Science and Technology, No1 DaiCoViet Str., HaiBaTrung Dist., HaNoi - VIETNAM
+Second address	 
+City	 Ha Noi
+Postcode	 10000
+Country	 Vietnam
+Email	 hai.dinhvan@hust.edu.vn
+-------
+First name	 Thanh Danh
+Last name	 le
+Persional website	 
+Organization	 Ho Chi Minh City University of technology Viet Nam
+Phone number	 0931997048
+First address	 268 Ly Thuong Kiet Street-Distric10-HoChiMinh City
+Second address	 
+City	 ho chi minh
+Postcode	 700000
+Country	 Việt Nam
+Email	 le_thanh_danh@hotmail.com
+-------
+First name	 Ngoc
+Last name	 Nguyen
+Persional website	 
+Organization	 HCMCUTE
+Phone number	 0909140406
+First address	 27 Luong Van Can ward 15 district 8
+Second address	 
+City	 Ho Chi Minh
+Postcode	 700000
+Country	 Vietnam
+Email	 ngocnt@hcmute.edu.vn
+-------
+First name	 Minh Man
+Last name	 Pham
+Persional website	 
+Organization	 Danang University of Technology and Education, The University of Danang
+Phone number	 +64 414 9392
+First address	 48 Cao Thang Street
+Second address	 Hai Chau District
+City	 Danang City
+Postcode	 52000
+Country	 Vietnam
+Email	 minhman.dnu.vn@gmail.com
+-------
+First name	 Hoang
+Last name	 Bui
+Persional website	 
+Organization	 Hanoi university of mining and geology
+Phone number	 (+84)973553928
+First address	 R.506, C building, Hanoi university of mining and geology, Co Nhue, Tu Liem, Ha Noi
+Second address	 
+City	 Ha Noi
+Postcode	 100000
+Country	 Viet Nam
+Email	 hoangminh8668@gmail.com
+-------
+First name	 Nguyen
+Last name	 Tuan
+Persional website	 
+Organization	 Institute for hydro power and renewable
+Phone number	 989588892
+First address	 Room 905, Van Khe urban, Ha Dong district, Hanoi, Vietnam
+Second address	 
+City	 Hanoi
+Postcode	 +84
+Country	 Vietnam
+Email	 nguyentuan.afm@gmail.com
+-------
+First name	 Minh Khoi
+Last name	 Huynh
+Persional website	 
+Organization	 Ho Chi Minh City University of Technology
+Phone number	 
+First address	 268 Ly Thuong Kiet. District 10. 
+Second address	 497 Hoa Hao. District 10.
+City	 Ho Chi Minh City
+Postcode	 741111
+Country	 Vietnam
+Email	 khoih722@gmail.com
+-------
+First name	 Nguyễn
+Last name	 Tùng
+Persional website	 
+Organization	 1985
+Phone number	 0968524188
+First address	 Hà Nội, Việt Nam
+Second address	 
+City	 Nam
+Postcode	 Hà Nội
+Country	 Việt Nam
+Email	 nguyenthanhtung@humg.edu.vn
+-------
+First name	 Quang Bang
+Last name	 Tao
+Persional website	 
+Organization	 The University of Danang - University of Science and Technology
+Phone number	 
+First address	 54 Nguyen Luong Bang
+Second address	 
+City	 Da Nang
+Postcode	 560000
+Country	 Viet Nam
+Email	 tqbang@dut.udn.vn
+-------
+First name	 Huu Quynh Anh
+Last name	 Le
+Persional website	 
+Organization	 University of Natural Resources and Environment
+Phone number	 909371083
+First address	 University of Natural Resources and Environment
+Second address	 236b Le Van Sy Street, District 1
+City	 HoChiMinh
+Postcode	 458
+Country	 Việt Nam
+Email	 quynhanh.lehuu@gmail.com
+-------
+First name	 Ngo Van
+Last name	 He
+Persional website	 http://ste.hust.edu.vn/ngovanhe/ 
+Organization	 Hanoi University of Science and Technology
+Phone number	 1679482746
+First address	 No1, Dai Co Viet, Hai Ba Trung, 10000, Hanoi, Vietnam
+Second address	 
+City	 Hanoi
+Postcode	 10000
+Country	 Vietnam
+Email	 he.ngovan@hust.edu.vn
+-------
+First name	 Cuong
+Last name	 Duong
+Persional website	 
+Organization	 Military Technical Institute
+Phone number	 0983381140
+First address	 Military Technical Institute, 236, Hoang Quoc Viet Street, Bac Tu Liem District
+Second address	 
+City	 Ha Noi
+Postcode	 084
+Country	 Vietnam
+Email	 quoccuongqd13501@yahoo.com
+-------
+First name	 Ngoc
+Last name	 Phung Van
+Persional website	 
+Organization	 Vietnam Academy Water Resources
+Phone number	 +84919203228
+First address	 Room 2301 – HH2 Bac Ha Building – To Huu Street – Thanh Xuan District – Ha Noi –
+Second address	 
+City	 Ha Noi
+Postcode	 10000
+Country	 Vietnam
+Email	 phungthanhngoc@gmail.com
+-------
+First name	 Hyoung Jin
+Last name	 Choi
+Persional website	 
+Organization	 Inha University
+Phone number	 +82328607486
+First address	 Incheon 402-751
+Second address	 
+City	 Incheon 
+Postcode	 
+Country	 Korea
+Email	 hjchoi@inha.ac.kr
+-------
+First name	 Minh Hien
+Last name	 Bui
+Persional website	 
+Organization	 University of Sience and Technology - The University of Danang
+Phone number	 
+First address	 54 Nguyen Luong Bang street, Lien Chieu district, Danang city, Vietnam
+Second address	 
+City	 Danang
+Postcode	 550000
+Country	 Vietnam
+Email	 bui.mhien@gmail.com
+-------
+First name	 Nguyen Van
+Last name	 Quyen
+Persional website	 https://sme.hust.edu.vn/nguyenvanquyen-10
+Organization	 Hanoi University of Science and Technology
+Phone number	 0949123010
+First address	 1 Dai Co Viet Road, Ha Noi, Viet Nam
+Second address	 
+City	 Ha Noi
+Postcode	 +844
+Country	 Viet Nam
+Email	 quyen.nguyenvan@hust.edu.vn
+-------
+First name	 C.K.
+Last name	 Chung
+Persional website	 
+Organization	 National Cheng Kung University, Taiwan
+Phone number	 886-6-2757575 x62111
+First address	 No. 1, Univ. Rd.
+Second address	 
+City	 Tainan
+Postcode	 701
+Country	 Taiwan
+Email	 ckchung@mail.ncku.edu.tw
+-------
+First name	 Hoang
+Last name	 dung
+Persional website	 
+Organization	 Haui
+Phone number	 0904389594
+First address	 ĐHCNHN
+Second address	 KIM Chung
+City	 Ha Noi
+Postcode	 043
+Country	 084
+Email	 tiendunghaui@gmail.com
+-------
+First name	 Duc An
+Last name	 Pham
+Persional website	 
+Organization	 Hanoi University of Science and Technology
+Phone number	 
+First address	 ducanpham83@gmail.com
+Second address	 
+City	 Hanoi
+Postcode	 100000
+Country	 Vietnam
+Email	 ducanpham83@gmail.com
+-------
+First name	 Minh Tai
+Last name	 Le
+Persional website	 
+Organization	 Ho Chi Minh City University of Technology and Education
+Phone number	 0948996955
+First address	 tailm@hcmute.edu.vn
+Second address	 
+City	 Ho Chi Minh
+Postcode	 700000
+Country	 Vietnam
+Email	 tailm@hcmute.edu.vn
+-------
+First name	 Duy
+Last name	 Phan The
+Persional website	 
+Organization	 Ho Chi Minh City University of Natural Resources and Environmental
+Phone number	 0908205568
+First address	 236B Le Van Sy, Ward 1, Tan Binh District
+Second address	 
+City	 Ho Chi Minh City
+Postcode	 725000
+Country	 Vietnam
+Email	 duypt@hcmunre.edu.vn
+-------
+First name	 Hung
+Last name	 Tran Doan
+Persional website	 
+Organization	 Nha Trang University
+Phone number	 +84 941440999
+First address	 Nha Trang University, 02 Nguyen Dinh Chieu, Nha Trang, Khanh Hoa
+Second address	 
+City	 Nha Trang
+Postcode	 +85 258
+Country	 Viet Nam
+Email	 hungtd@ntu.edu.vn
+-------
+First name	 Khá
+Last name	 Phạm
+Persional website	 
+Organization	 University of Transport and Communnications
+Phone number	 
+First address	 No.3 Cau Giay Street, Lang Thuong Ward, Dong Da District, Ha Noi
+Second address	 
+City	 Hanoi
+Postcode	 100000
+Country	 Vietnam
+Email	 vankha.pham@utc.edu.vn
+-------
+First name	 Hung
+Last name	 Bui Thanh
+Persional website	 
+Organization	 School of Heat Engineering and Refrigeration, Hanoi University of Science and Technology
+Phone number	 0903203825
+First address	 School of Heat Engineering and Refrigeration, Hanoi University of Science and Technology. No.1, Dai Co Viet Str., Hanoi, Vietnam
+Second address	 
+City	 Hanoi
+Postcode	 8424
+Country	 Vietnam
+Email	 hung.buithanh@hust.edu.vn
+-------
+First name	 An
+Last name	 Nguyễn Văn
+Persional website	 MrAnBK
+Organization	 Ha Noi University of Science and Technology
+Phone number	 0915380009
+First address	 Q.Hai Bà Trưng
+Second address	 
+City	 Hà Nội
+Postcode	 +84
+Country	 Việt Nam
+Email	 annguyenvanbk@gmail.com
+-------
+First name	 Si
+Last name	 BACH Quoc
+Persional website	 http://scv.udn.vn/bqsi
+Organization	 Danang College of Technology - University of Danang, Danang, Vietnam 
+Phone number	 +84917051222
+First address	 48 Cao thang Str., Danang City - Vietnam
+Second address	 
+City	 Danang
+Postcode	 0236
+Country	 Vietnam
+Email	 bachquocsi@gmail.com
+-------
+First name	 Nguyen
+Last name	 Vu Anh Duy
+Persional website	 
+Organization	 Ho Chi Minh City University of Food Industry
+Phone number	 
+First address	 10 Ngo Chi Quoc, Phu Cuong
+Second address	 
+City	 Thu Dau Mot, Binh Dung
+Postcode	 820000
+Country	 Vietnam
+Email	 nvaduy@gmail.com
+-------
+First name	 Truong Duc
+Last name	 Phuc
+Persional website	 
+Organization	 School of Mechanical Engineering, HUST
+Phone number	 0915088068
+First address	 C5-112, HUST, No.1 Dai Co Viet
+Second address	 
+City	 Hanoi
+Postcode	 12345
+Country	 Vietnam
+Email	 phuc.truongduc@hust.edu.vn
+-------
+First name	 THO
+Last name	 NGUYEN VAN
+Persional website	 
+Organization	 Faculties of Engineering, Hai Phong University, Hai Phong City, Vietnam
+Phone number	 +7908 510 85 95
+First address	 94/77 Shokholova street, District Proletarsky
+Second address	 
+City	 Rostov on don
+Postcode	 344000
+Country	 Russia
+Email	 thonguyen239@gmail.com
+-------
+First name	 Huy-Tuan
+Last name	 Pham
+Persional website	 http://fme.hcmute.edu.vn/Default.aspx?ArticleId=3ebbaa9b-9b21-487f-949f-81c32013187f
+Organization	 HCMC University of Technology and Education
+Phone number	 838968641
+First address	 NO 1 VO VAN NGAN, THU DUC
+Second address	 
+City	 HO CHI MINH
+Postcode	 700000
+Country	 Vietnam
+Email	 phtuan@hcmute.edu.vn
+-------
+First name	 Huu-Tho
+Last name	 Nguyen
+Persional website	 
+Organization	 Ho Chi Minh City University of Food Industry
+Phone number	 0909865978
+First address	 Faculty of Mechanical Engineering Technology, Ho Chi Minh City University of Food Industry
+Second address	 
+City	 Ho Chi Minh City
+Postcode	 700000
+Country	 Vietnam
+Email	 nguyenhuutho99@gmail.com
+-------
+First name	 Arkadiy
+Last name	 Soloviev
+Persional website	 https://donstu.ru/structure/cadre/solovev-arkadiy-nikolaevich
+Organization	 Department of Theoretical and Applied Mechanics, Don State Technical University, Rostov-on-Don, Russia
+Phone number	 +7904 504 16 38
+First address	 1 Gagarin square, District Proletarsky
+Second address	 
+City	 Rostov on Don
+Postcode	 344000
+Country	 Russia
+Email	 solovievarc@gmail.com
+-------
+First name	 Hoa
+Last name	 Pham
+Persional website	 
+Organization	 Utehy
+Phone number	 964865002
+First address	 khoai Chau - Hung Yen
+Second address	 
+City	 utehy
+Postcode	 84
+Country	 Việt Nam
+Email	 hoapt2108@gmail.com
+-------
+First name	 vien
+Last name	 vo
+Persional website	 
+Organization	 Quy Nhon University
+Phone number	 0084-914908789
+First address	 170 An Duong Vuong
+Second address	 
+City	 Quy Nhon
+Postcode	 820000
+Country	 Vietnam
+Email	 vovien@qnu.edu.vn
+-------
+First name	 Dinh
+Last name	 Duc Hanh
+Persional website	 
+Organization	 Da Nang university of science and technology
+Phone number	 
+First address	 Da Nang
+Second address	 
+City	 Da Nang
+Postcode	 700000
+Country	 Việt Nam
+Email	 duchanh09c1a@gmail.com
+-------
+First name	 Nguyen
+Last name	 Vo Chau Ngan
+Persional website	 
+Organization	 Can Tho University
+Phone number	 0918432342
+First address	 8/3, 291 line, 30-4 street, Xuan Khanh ward, Ninh Kieu district, Can Tho city
+Second address	 
+City	 Can Tho
+Postcode	 10000
+Country	 Vietnam
+Email	 nvcngan@ctu.edu.vn
+-------
+First name	 Nguyen
+Last name	 Vo Chau Ngan
+Persional website	 
+Organization	 Can Tho University
+Phone number	 0918432342
+First address	 8/3, 291 line, 30-4 street, Xuan Khanh ward, Ninh Kieu district, Can Tho city
+Second address	 
+City	 Can Tho
+Postcode	 10000
+Country	 Vietnam
+Email	 chaungan@gmail.com
+-------
+First name	 Mai
+Last name	 Nguyen
+Persional website	 hust.edu.vn
+Organization	 HUST
+Phone number	 0982837465
+First address	 1 Dai Co Viet
+Second address	 Hai Ba Trung
+City	 Hanoi
+Postcode	 10000
+Country	 Vietnam
+Email	 rinkaitokisaki3215@gmail.com
+-------
+First name	 Hoai
+Last name	 Nguyen
+Persional website	 
+Organization	 University of Technology and Education, The University of Danang
+Phone number	 
+First address	 48 Cao Thang Street, Hai Chau District, Da Nang city
+Second address	 
+City	 Da Nang
+Postcode	 550000
+Country	 Việt Nam
+Email	 hoainguyen.tme@gmail.com
+-------
+First name	 Ha
+Last name	 Nguyen Van
+Persional website	 
+Organization	 Technical University of Liberec
+Phone number	 +420777091841
+First address	 Studentská 1402/2
+Second address	 
+City	 Liberec
+Postcode	 461 17 Lib
+Country	 Czech Republic
+Email	 ha.nguyen.van@tul.cz
+-------
+First name	 Ha
+Last name	 Nguyen Van
+Persional website	 
+Organization	 Technical University of Liberec
+Phone number	 +420777091841
+First address	 Studentská 1402/2
+Second address	 
+City	 Liberec
+Postcode	 461 17 Lib
+Country	 Czech Republic
+Email	 nguyenha.hut@gmail.com
+-------
+First name	 Tran Hung
+Last name	 Tra
+Persional website	 
+Organization	 Nha Trang University
+Phone number	 84-0935272168
+First address	 tra@ntu.edu.vn
+Second address	 
+City	 Nha Trang
+Postcode	 0258
+Country	 Vietnam
+Email	 tra@ntu.edu.vn
+-------
+First name	 Pham Son
+Last name	 Minh
+Persional website	 
+Organization	 SPKT
+Phone number	 0938226313
+First address	 01 Vo Van Ngan, Q. Thu Duc
+Second address	 
+City	 Ho Chi Minh City
+Postcode	 00007
+Country	 Việt Nam
+Email	 minhps@hcmute.edu.vn
+-------
+First name	 Nack J.
+Last name	 Kim
+Persional website	 
+Organization	 POSTECH
+Phone number	 010-5021-2135
+First address	 Graduate Institute of Ferrous Technology
+Second address	 POSTECH
+City	 Pohang
+Postcode	 790-784
+Country	 Korea
+Email	 njkim@postech.ac.kr
+-------
+First name	 Ha
+Last name	 Tran Huu
+Persional website	 
+Organization	 Quy Nhon University
+Phone number	 01287708769
+First address	 100, Hai Ba Trung, Quy Nhon, Binh Dinh, Viet Nam
+Second address	 
+City	 Binh Dinh
+Postcode	 59000000
+Country	 Vietnam
+Email	 tranhuuhaqn1992@gmail.com
+-------
+First name	 Van Bien
+Last name	 Bui
+Persional website	 
+Organization	 Hai Phong University
+Phone number	 
+First address	 171 Phan Dang Luu
+Second address	 
+City	 Hai Phong
+Postcode	 16000
+Country	 Vietnam
+Email	 buivanbien.dhhp@gmail.com
+-------
+First name	 Huy Hoai
+Last name	 Nguyen
+Persional website	 
+Organization	 PYMEPHARCO
+Phone number	 084 95719194
+First address	 166-170 Nguyen Hue
+Second address	 
+City	 Tuy Hoa
+Postcode	 057
+Country	 Viet Nam
+Email	 huyhoai79@gmail.com
+-------
+First name	 LAN
+Last name	 NGUYEN THI
+Persional website	 
+Organization	 QUY NHON UNIVERSITY
+Phone number	 +84914115047
+First address	 DEPARTMENT OF CHEMISTRY QUY NHON UNIVERSITY 170 AN DUONG VUONG, QUY NHON
+Second address	 
+City	 QUY NHON
+Postcode	 590000
+Country	 VIET NAM
+Email	 nguyenthilan@qnu.edu.vn
+-------
+First name	 A
+Last name	 B
+Persional website	 
+Organization	 HUST
+Phone number	 123
+First address	 1 abc
+Second address	 2 abc
+City	 Hanoi
+Postcode	 10000
+Country	 Vietnam
+Email	 abc@gmail.com
+-------
+First name	 Lê Văn
+Last name	 Tạo
+Persional website	 
+Organization	 MTA
+Phone number	 0912505036
+First address	 236 Hoang Quoc Viet
+Second address	 
+City	 Ha Noi
+Postcode	 084
+Country	 Vietnam
+Email	 taoitd@yahoo.com
+-------
+First name	 PHU
+Last name	 DO XUAN
+Persional website	 
+Organization	 Vietnamese-German University
+Phone number	 0933409649
+First address	 Le Lai st, Thu Dau Mot city, Binh Duong, Vietnam
+Second address	 
+City	 Binh Duong
+Postcode	 084
+Country	 Vietnam
+Email	 phu.dx@vgu.edu.vn
+-------
+First name	 Phu
+Last name	 Do Xuan
+Persional website	 
+Organization	 Vietnamese-German University
+Phone number	 
+First address	 MediRobotics Lab
+Second address	 Vietnamese-German University
+City	 Ho Chi Minh city
+Postcode	 700000
+Country	 Vietnam
+Email	 dophubk@gmail.com
+-------
+First name	 Nguyễn Chí
+Last name	 Công 
+Persional website	 
+Organization	 Công ty TNHH MTV Hóa chất 21
+Phone number	 0988262656
+First address	 Phú Hộ
+Second address	 
+City	 Thị xã Phú Thọ
+Postcode	 290000
+Country	 Việt Nam
+Email	 congncz4@gmail.com
+-------
+First name	 Vinh
+Last name	 Nguyen
+Persional website	 
+Organization	 Hanoi Univeristy
+Phone number	 
+First address	 Hà Nội, Việt Nam
+Second address	 
+City	 Ha Noi
+Postcode	 Hà Nội
+Country	 Việt Nam
+Email	 hanoistudy2016@gmail.com
+-------
+First name	 Phung
+Last name	 Chi Sy
+Persional website	 
+Organization	 Environmental Technology Center
+Phone number	 0903905112
+First address	 463 Phan Van Tri Str., Ward 5, Go Vap Dist.
+Second address	 
+City	 Ho Chi Minh City
+Postcode	 +84.8
+Country	 Vietnam
+Email	 entecvn.pcsy@gmail.com
+-------
+First name	 Phung
+Last name	 Chi Sy
+Persional website	 
+Organization	 Environmental Technology Center
+Phone number	 0903905112
+First address	 463 Phan Van Tri Str., Ward 5, Go Vap Dist.
+Second address	 
+City	 Ho Chi Minh City
+Postcode	 +84.8
+Country	 Vietnam
+Email	 phung.chisy@gmail.com
+-------
+First name	 Van Hoa
+Last name	 Nguyen
+Persional website	 
+Organization	 Nha Trang University
+Phone number	 0966337972
+First address	 Department of Chemistry, Nha Trang University, 02 Nguyen Dinh Chieu, Nha Trang, Vietnam
+Second address	 
+City	 Nha Trang
+Postcode	 65000
+Country	 Vietnam
+Email	 hoanv@ntu.edu.vn
+-------
+First name	 Nguyen
+Last name	 Thanh Tan
+Persional website	 
+Organization	 Ho Chi Minh City of University Technology and Education
+Phone number	 0938004496
+First address	 Faculty of Mechanical Engineering, Ho Chi Minh City of University Technology and Education, No. 1, Vo Van Ngan street, Thu Duc district, Ho Chi Minh city
+Second address	 
+City	 Ho Chi Minh city
+Postcode	 700000
+Country	 Viet Nam
+Email	 tannt@hcmute.edu.vn
+-------
+First name	 Do Duc
+Last name	 Trung
+Persional website	 
+Organization	 Ha Noi University of Industry
+Phone number	 0988488691
+First address	 Cau Dien Street
+Second address	 Bac Tu Liem District
+City	 Ha Noi
+Postcode	 100000
+Country	 Viet Nam
+Email	 dotrung.th@gmail.com
+-------
+First name	 Nguyen
+Last name	 Duy Dat
+Persional website	 
+Organization	 Military Technical Institute, Vietnam
+Phone number	 0967136557
+First address	 236 - Hoang Quoc Viet street
+Second address	 
+City	 Ha Noi
+Postcode	 100000
+Country	 Viet Nam
+Email	 nguyenduydat1987@gmail.com
+-------
+First name	 The-Anh
+Last name	 Phan
+Persional website	 
+Organization	 The University of Danang, University of Science and Technology
+Phone number	 
+First address	 Khoa Hoa, 54-Nguyen Luong Bang, Lien Chieu, Danang
+Second address	 
+City	 Danang
+Postcode	 550000
+Country	 Viet Nam
+Email	 ptanh@dut.udn.vn
+-------
+First name	 Thi Thanh Tram
+Last name	 Trang
+Persional website	 
+Organization	 Graduate Institute of Ferrous Technology, Pohang University of Science and Technology
+Phone number	 
+First address	 77 Cheongam-Ro, Hyoja-dong, Namgu
+Second address	 
+City	 Pohang
+Postcode	 37673
+Country	 South Korea
+Email	 thanhtram309@postech.ac.kr
+-------
+First name	 Tran
+Last name	 Ngoc Tu
+Persional website	 
+Organization	 Vietnam Maritime University
+Phone number	 0963332317
+First address	 484 Lay Tray, Ngo Quyen, Hai Phong
+Second address	 100 Nguyen Van Hoi, Cat Bi, Hai An, Hai Phong
+City	 Hai Phong
+Postcode	 180000
+Country	 Vietnam
+Email	 tutn.dt@vimaru.edu.vn
+-------
+First name	 Huan
+Last name	 Le
+Persional website	 
+Organization	 EIU
+Phone number	 
+First address	 TDC Plaza, Le Loi Street
+Second address	 
+City	 Thu Dau Mot City
+Postcode	 +84
+Country	 Vietnam
+Email	 huan.le@eiu.edu.vn
+-------
+First name	 Kozo
+Last name	 Ishizaki
+Persional website	 
+Organization	 Nagaoka University of Technology
+Phone number	 +81-90-1533-1880
+First address	 Nagaoka University of Technology
+Second address	 
+City	 Nagaoka, Niigata
+Postcode	 940-2188
+Country	 Japan
+Email	 ko3_ishizaki@mech.nagaokaut.ac.jp
+-------
+First name	 Anh Duc
+Last name	 Le
+Persional website	 
+Organization	 Nong Lam University, HCM City
+Phone number	 +84.908.470.490
+First address	 Nong Lam University, HCM City
+Second address	 
+City	 HCM City
+Postcode	 028
+Country	 84
+Email	 leanhduc@hcmuaf.edu.vn
+-------
+First name	 Quang
+Last name	 Nguyen Xuan
+Persional website	 quangnx@hcmute.edu.vn
+Organization	 HCMUTE
+Phone number	 0918334377
+First address	 No 23, 12 street, Phuoc Long B Ward, District 9, HCM city
+Second address	 
+City	 Ho Chi Minh
+Postcode	 700000
+Country	 Viet Nam
+Email	 quangnx@hcmute.edu.vn
+-------
+First name	 Tri
+Last name	 Diep Bao
+Persional website	 
+Organization	 Industrial University of Ho Chi Minh City
+Phone number	 
+First address	 12 Nguyen Van Bao, Ward 4, Go Vap District, Ho Chi Minh City
+Second address	 
+City	 Ho Chi Minh
+Postcode	 84
+Country	 Viet Nam
+Email	 1500103@student.hcmute.edu.vn
+-------
+First name	 Tri
+Last name	 Diep Bao
+Persional website	 
+Organization	 Industrial University of Ho Chi Minh City
+Phone number	 
+First address	 12 Nguyen Van Bao, Ward 4, Go Vap District, Ho Chi Minh City
+Second address	 
+City	 Ho Chi Minh
+Postcode	 84
+Country	 Việt Nam
+Email	 diepbaotri@iuh.edu.vn
+-------
+First name	 Alireza
+Last name	 Zargaran
+Persional website	 
+Organization	 Graduate Institute of Ferrous Technology, POSTECH
+Phone number	 0082-542799097
+First address	 MCL Lab., Graduate Institute of Ferrous Technology, POSTECH
+Second address	 
+City	 Pohang
+Postcode	 37673
+Country	 South Korea
+Email	 alireza@postech.ac.kr
+-------
+First name	 Phan
+Last name	 Thi Thuy Hang
+Persional website	 
+Organization	 The University of Danang – University of Science and Technology, Vietnam
+Phone number	 0935 606 756
+First address	 34/34 Ngo Si Lien street, Lien Chieu Dictrict 
+Second address	 
+City	 Danang City
+Postcode	 0236
+Country	 Vietnam
+Email	 thuyhang@dut.udn.vn
+-------
+First name	 Viet-Hong
+Last name	 Tran
+Persional website	 
+Organization	 Ho Chi Minh city University of Technology, VNU-HCM
+Phone number	 0902424148
+First address	 268 Ly Thuong Kiet street, ward 14, district 10
+Second address	 
+City	 Ho Chi Minh city
+Postcode	 700000
+Country	 Vietnam
+Email	 tvhong@hcmut.edu.vn
+-------
