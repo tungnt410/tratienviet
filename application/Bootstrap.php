@@ -10,6 +10,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         return $autoloader;
     }
 
+    
+
     protected function _initDb() {
         $config = parse_ini_file(APPLICATION_PATH . '/configs/database.ini');
         $params = array(
