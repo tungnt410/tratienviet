@@ -1,0 +1,38 @@
+<div class="container container-products">
+    <h2>Danh sách Câu lạc bộ</h2>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tên CLB</th>
+                <th>Mô tả</th>
+                <th>Status</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $order = 1;
+            foreach ($this->clubs as $club):
+                ?>
+                <tr id="club-<?php echo $club['id']; ?>">
+                    <td><?php echo $order++; ?></td>
+                    <td class="id"><?php echo $club['id']; ?></td>
+                    <td class="name"><a href="/clubs/edit?id=<?php echo $club['id']; ?>"><?php echo $club['name']; ?></a></td>
+                    <td class="description"><?php echo $club['description']; ?></td>
+                    <td class="act"><?php echo $club['active']; ?></td>
+                    <td><a class="btn btn-primary" href="/clubs/edit?id=<?php echo $club['id']; ?>" >Thông tin CLB</a> <a href="#remove" class="remove_object btn btn-danger">Xóa CLB</a></td>
+
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php
+echo $this->partial("layout/modal_info.phtml", array('title' => 'Upload club', 'action' => '/club/',
+    'fields' => array('name' => array('type' => 'fileUpload', 'option' => 'club')),
+    'controller_name' => 'club'));
+echo $this->partial("layout/modal_remove.phtml", array('title' => 'Remove club '));
+

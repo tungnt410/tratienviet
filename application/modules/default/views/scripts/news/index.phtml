@@ -1,0 +1,10 @@
+<div class="row">
+    <?php echo $this->introduction['content'];?>
+</div>
+<?php
+echo $this->partial("layout/modal_info.phtml", array('title' => 'Add news ',
+    'fields' => array(),
+    'controller_name' => 'news'));
+echo $this->partial("layout/modal_remove.phtml", array('title' => 'Remove newspaper '));
+?>
+

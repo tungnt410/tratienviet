@@ -1,0 +1,34 @@
+<div class="container container-products">
+    <div class="contentVMT">
+        <h2>Thêm cửa hàng mới</h2>
+        <form action="/store/create" method="post" enctype="multipart/form-data">
+            <table class="table table-bordered">
+                <tr>
+                    <td>Tên cửa hàng:</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="store[name]" value="" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mô tả cửa hàng:</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="store[description]" value="" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ cửa hàng:</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="store[address]" value="" required>
+                        </div>
+                    </td>
+                </tr>
+            </table>           
+            <button class="btn btn-success" type="submit" name="save">TẠO MỚI</button>
+        </form>
+    </div>
+</div>

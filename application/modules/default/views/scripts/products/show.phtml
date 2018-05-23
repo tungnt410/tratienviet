@@ -1,0 +1,31 @@
+<div class="container container-products">
+	<form class="form-horizontal" method="post" action="#" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="<?php echo $this->products['id']; ?>">
+		<h2>Thông tin sản phẩm</h2>
+		<div class="form-group">
+			<label class="control-label col-sm-3" for="name">Tên sản phẩm:</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="name" name="name" required value="<?php echo $this->products['name']; ?>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3" for="description">Mô tả sản phẩm:</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="description" name="description" value="<?php echo $this->products['description']; ?>">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3" for="images">Ảnh sản phẩm:</label>
+			<div class="col-sm-9">
+				<input type="file" accept="image/png, image/jpeg, image/gif" id="images" name="image"/>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-3" for="price">Giá sản phẩm:</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="price" name="price" required value="<?php echo $this->products['price']; ?>">
+			</div>
+		</div>
+	</form>
+</div>

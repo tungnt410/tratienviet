@@ -1,0 +1,37 @@
+<div class="container container-products">
+    <h1>
+        Đăng ký quản lý Club
+    </h1>
+    <div class="row"></div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Tên</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $order = 1;
+            foreach ($this->users as $user):?>
+            <tr id="user-<?php echo $user['id']; ?>">
+                <td><?php echo $order++; ?></td>
+                <td class="id"><?php echo $user['id']; ?></td>
+                <td class="name title"><a href="/user/show?id=<?php echo $user['id']; ?>"><?php echo $user['name']; ?></a></td>
+                <td class="email"><a href="mailto:<?php echo $user['email']; ?>"><?php echo $user['email']; ?></a></td>
+                <td class="paper">
+                    <form action="/admin/update-user">
+                        <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
+                        <button class="btn btn-primary" type="submit" name="type" value="1" onclick="return confirm('Đồng ý cho tài khoản này làm quản lý Club')">Đồng ý</button>
+                        <button class="btn btn-danger" type="submit" name="type" value="0" onclick="return confirm('Không đồng ý cho tài khoản này làm quản lý Club')">Không đồng ý</button>
+                    </form>                   
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,32 @@
+<div class="container container-products">
+    <h2>Danh sách thành viên Câu lạc bộ</h2>
+    <div class="row"></div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tên thành viên</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $order = 1;
+            foreach ($this->club_has_user as $users):
+                ?>
+                <tr id="users-<?php echo $users['id']; ?>">
+                    <td><?php echo $order++; ?></td>
+                    <td class="id"><?php echo $users['id']; ?></td>
+                    <td class="name title"><a href="/index/edit?id=<?php echo $users['id']; ?>"><?php echo $users['name']; ?></a></td>
+                    <td><a href="/index/edit?id=<?php echo $users['id']; ?>">Edit</a></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php
+echo $this->partial("layout/modal_info.phtml", array('title' => 'Upload users', 'action' => '/users/',
+    'fields' => array('name' => array('type' => 'fileUpload', 'option' => 'Paper')),
+    'controller_name' => 'users'));
+echo $this->partial("layout/modal_remove.phtml", array('title' => 'Remove users '));

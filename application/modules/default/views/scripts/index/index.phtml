@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="slideShow"><a href="#"><img src="/images/telecom-ecosystem.jpg"></a></div> 
+</div>
+<div class="container container-products">
+    <h2>Sản phẩm nổi bật</h2>
+    <?php
+    foreach ($this->products as $product):
+        ?>
+        <div id="product-<?php echo $products['id']; ?>" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center productHome">
+            <div class="contentProduct">
+                <a href="#" style="color: black !important;">
+                    <div class="image"><?php echo "<img src='" . $product['images'] . "' alt='Chưa có ảnh'>";?></div>
+                    <div class="sumProduct">
+                        <div class="infoProduct">
+                            <div class="name" style="font-weight: bold;"><?php echo $product['name']; ?></div>
+                            <div class="description" style="font-style: italic;"><?php echo $product['description']; ?></div>
+                        </div>
+                        <div class="price"><?php echo $product['price']; ?><i> VNĐ</i></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+<div class="container container-products" style="margin-bottom: 20px;">
+    <h2>Các đối tác</h2>
+    <div class="doiTac">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6"><a href="http://vn.mitsubishielectric.com/vi/" target="_blank"><img src="https://sheer.hust.edu.vn/documents/21290/22515/18051646_1417210564996031_1089221708_n.jpg/41070429-f3ea-49a4-bf83-72b62eddd198?t=1492908506000" /></a></div>
+
+        <div class="col-lg-3 col-md-4 col-xs-4"><a href="http://www.coteccons.vn/" target="_blank"><img src="https://sheer.hust.edu.vn/documents/21290/22515/18073459_1417210561662698_520194579_n.jpg/28673cc9-4384-4bbc-adf6-64019b3ace74?t=1493774760580" /></a></div>
+
+        <div class="col-lg-3 col-md-4 col-xs-4"><a href="http://www.daikin.com.vn/vi/" target="_blank"><img src="https://sheer.hust.edu.vn/documents/21290/22515/18090852_1417210568329364_1862552431_o.gif/942417d7-f44e-4b6b-96d7-87b9d8e67fd2?t=1493774759734" /></a></div>
+
+        <div class="col-lg-3 col-md-4 col-xs-4"><a href="https://www.toshiba.com.vn/" target="_blank"><img src="https://sheer.hust.edu.vn/documents/21290/22515/18090873_1417210584996029_160529127_o.png/422f3ffd-833b-4334-bc42-fd507ff8bbf4?t=1492908503000" /></a></div>
+    </div>
+</div>
+
+

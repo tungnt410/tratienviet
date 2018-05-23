@@ -1,0 +1,34 @@
+<div class="container container-products">
+    <h1>Danh sách người dùng</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Quyền hạn</th>
+                <th>Trạng thái</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $order = 1;
+            foreach ($this->users as $user):
+                ?>
+                <tr id="user-<?php echo $user['id']; ?>">
+                    <td><?php echo $order++; ?></td>
+                    <td class="id"><?php echo $user['id']; ?></td>
+                    <td class="name title"><?php echo $user['name']; ?></td>
+                    <td class="email"><a href="mailto:<?php echo $user['email']; ?>"><?php echo $user['email']; ?></a></td>
+                    <td class="telephone"><?php echo $user['telephone']; ?></td>
+                    <td class="type"><?php echo $user['type']; ?></td>
+                    <td class="act"><?php echo $user['active']; ?></td>
+                    <td><a class="btn btn-primary" href="/user/edit?id=<?php echo $user['id']; ?>">Quản lý người dùng</a></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

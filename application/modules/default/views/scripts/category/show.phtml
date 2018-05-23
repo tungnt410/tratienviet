@@ -1,0 +1,5 @@
+<?php if($_SESSION['type'] > 1):?>
+	<p><a href="/category/edit/id/<?php echo $this->category['id']; ?>" class="pull-right">Edit</a></p>
+<?php endif;?>
+<div class="row"></div>
+<div><?php echo $this->category['content']; ?></div>

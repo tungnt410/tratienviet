@@ -1,0 +1,348 @@
+<div class="contentVMT">
+	<!--     <a class="removePaper" href="/">Withdraw this paper</a><br><br> -->
+	<span>Paper Status / Action</span>
+	<form action="/paper/update" method="post" enctype="multipart/form-data">
+
+		<table class="table table-bordered">
+			<tr class="mauXanh">
+				<th>1. Abstract</th>
+				<th>2. Full paper</th>
+				<th>3. Copyright form</th>
+				<th>4. Biography</th>
+				<th>5. Presentation</th>
+				<th>6. Invitation letter</th>
+			</tr>
+			<tr>
+				<td>
+					<label for="paper-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Upload Abstract</a></label><br>
+					<input type="file" id="paper-file" class="select-file" name="paper[file]" <?php echo $this->disable; ?>>
+					<a href="<?php echo $this->paper['file']; ?>"><i class="fa fa-download" aria-hidden="true"></i> Download Abtract</a> 
+					<br>
+					<?php if ($this->paper['file'] == NULL || $this->paper['file'] == '/uploads/papers/' . $this->paper['user_id'] . '/') { ?>
+					<span class="paperUpload">Not Available</span>                           
+					<?php } else { ?>                           
+					<span class="paperUpload">Submitted</span>
+					<?php } ?>
+					<br>
+					<?php if ($this->paper['type'] == 1) { ?>
+					<span class="paperAvai">Accepted</span>                           
+					<?php } elseif($this->paper['type'] == 2) { ?>                           
+					<span class="paperAvai">Rejected</span>
+					<?php } else { ?>                           
+					<span class="paperAvai"></span>
+					<?php } ?>
+					<hr>
+					<!-- Review result
+					<?php if ($this->user['type'] > 0) { ?>
+					<label for="paper-review"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+					<input type="file" id="paper-review" class="select-file" name="paper[review]">                         
+					<?php } ?>                 	
+					<a href="<?php echo $this->paper['review']; ?>"><i class="fa fa-download" aria-hidden="true"></i></a> -->
+				</td>
+				<td>
+					<label for="fullPaper-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <marquee scrollamount="140" scrolldelay="4000">Upload Full paper</marquee></a></label><br>
+					<input type="file" id="fullPaper-file" class="select-file" name="paper[fullPaper]">
+					<a href="<?php echo $this->paper['fullPaper']; ?>"><i class="fa fa-download" aria-hidden="true"></i> Download Full paper</a> 
+					<br>
+					<?php if ($this->paper['fullPaper'] == NULL || $this->paper['fullPaper'] == '/uploads/papers/' . $this->paper['user_id'] . '/') { ?>
+					<span class="paperUpload">Not Available</span>                           
+					<?php } else { ?>                           
+					<span class="paperUpload">Submitted</span><br>
+					<span class="paperName">File name: <?php echo substr($this->paper['fullPaper'], 18) ?></span>
+					<?php } ?>
+					<br>
+					<!-- <?php if ($this->paper['type'] == 1) { ?>
+					<span class="paperAvai">Accepted</span>                           
+					<?php } elseif($this->paper['type'] == 2) { ?>                           
+					<span class="paperAvai">Rejected</span>
+					<?php } else { ?>                           
+					<span class="paperAvai"></span>
+					<?php } ?>
+					<hr> -->
+					<!-- Review result 
+					<?php if ($this->user['type'] > 0) { ?>
+					<label for="fullPaper-review"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+					<input type="file" id="fullPaper-review" class="select-file" name="paper[reviewFull]">
+					<?php } ?>        
+					<a href="<?php echo $this->paper['reviewFull']; ?>"><i class="fa fa-download" aria-hidden="true"></i></a> -->
+				</td>
+				<td>
+					Upload Copyright <label for="copyright-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+					<input type="file" id="copyright-file" class="select-file" name="paper[copyright]" <?php echo $this->disable; ?>>
+					<a href="<?php echo $this->paper['copyright']; ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
+					<br>
+					<?php if ($this->paper['copyright'] == NULL || $this->paper['copyright'] == '/uploads/papers/' . $this->paper['user_id'] . '/') { ?>
+					<span class="paperUpload">Not Available</span>                           
+					<?php } else { ?>                           
+					<span class="paperUpload">Submitted</span>
+					<?php } ?>
+				</td>
+				<td>
+					Upload Biography &nbsp;&nbsp;&nbsp;<label for="biography-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+					<input type="file" id="biography-file" class="select-file" name="paper[biography]" <?php echo $this->disable; ?> >
+					<a href="<?php echo $this->paper['biography']; ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
+					<br>
+					<?php if ($this->paper['biography'] == NULL || $this->paper['biography'] == '/uploads/papers/' . $this->paper['user_id'] . '/') { ?>
+					<span class="paperUpload">Not Available</span>                           
+					<?php } else { ?>                           
+					<span class="paperUpload">Submitted</span>
+					<?php } ?>
+				</td>
+				<td>
+					Upload Presentation <label for="presen-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+					<input type="file" id="presen-file" class="select-file" name="paper[presen]" <?php echo $this->disable; ?> >
+					<a href="<?php echo $this->paper['presen']; ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
+					<br>
+					<?php if ($this->paper['presen'] == NULL || $this->paper['presen'] == '/uploads/papers/' . $this->paper['user_id'] . '/') { ?>
+					<span class="paperUpload">Not Available</span>                           
+					<?php } else { ?>                           
+					<span class="paperUpload">Submitted</span>
+					<?php } ?>
+				</td>
+				<td>
+					<?php if($this->user['type'] == 2):?>
+					<label for="inviLetter-file"><a>Upload Invitation Letter</a></label><br>
+					<input type="file" id="inviLetter-file" class="select-file" name="paper[inviLetter]">
+					<?php endif;?>
+					<a href="<?php echo $this->paper['inviLetter']; ?>"><i class="fa fa-download" aria-hidden="true"></i> Download Invitation Letter</a> 
+					<br>
+					<?php if ($this->paper['inviLetter'] == NULL || $this->paper['inviLetter'] == '/uploads/papers/' . $this->paper['user_id'] . '/') { ?>
+					<span class="paperUpload">Not Available</span>                           
+					<?php } else { ?>                           
+					<span class="paperUpload">Submitted</span><br>
+					<span class="paperName">File name: <?php echo substr($this->paper['inviLetter'], 18) ?></span>
+					<?php } ?>
+				</td>
+				<!-- <td>
+					<?php if ($this->paper['inviLetter'] != NULL) { ?>
+					<span class="paperUpload">- Available</span>                           
+					<?php } else { ?>                           
+					<span class="paperUpload">- Not Available</span>
+					<?php } ?>
+				</td> -->
+			</tr>
+		</table>
+
+		<br>
+		<span>Corresponding Author:</span>
+		<input type="hidden" name="author[id]" value="<?php echo $this->author['id']; ?>" <?php echo $this->disable; ?>>
+		<table class="table table-bordered">
+			<tr>
+				<th class="mauXanh">Title</th>
+				<th style="font-weight: normal;"><input style="width: 100%;" type="text" name="author[title]" value="<?php echo $this->author['title']; ?>" <?php echo $this->disable; ?>></th>
+			</tr>
+			<tr>
+				<td class="mauXanh" style="font-weight: bold;">Name</td>
+				<td><input style="width: 100%;" type="text" name="author[name]" value="<?php echo $this->author['name']; ?>" <?php echo $this->disable; ?>><br></td>
+			</tr>
+			<tr>
+				<td class="mauXanh" style="font-weight: bold;">Affiliation</td>
+				<td><input style="width: 100%;" type="text" name="author[affiliation]" value="<?php echo $this->author['affiliation']; ?>" <?php echo $this->disable; ?>><br></td>
+			</tr>
+			<tr>
+				<td class="mauXanh" style="font-weight: bold;">Email</td>
+				<td><input style="width: 100%;" type="email" name="author[email]" value="<?php echo $this->author['email']; ?>" <?php echo $this->disable; ?>></td>
+			</tr>
+			<tr>
+				<td class="mauXanh" style="font-weight: bold;">Telephone</td>
+				<td><input style="width: 100%;" type="text" name="author[phone]" value="<?php echo $this->author['phone']; ?>" <?php echo $this->disable; ?>></td>
+			</tr>
+			<tr>
+				<td class="mauXanh" style="font-weight: bold;">Postal Address</td>
+				<td><input style="width: 100%;" type="text" name="author[postal]" value="<?php echo $this->author['postal']; ?>" <?php echo $this->disable; ?>></td>
+			</tr>
+			<tr>
+				<td class="mauXanh" style="font-weight: bold;">Country</td>
+				<td><input style="width: 100%;" type="text" name="author[country]" value="<?php echo $this->author['country']; ?>" <?php echo $this->disable; ?>></td>
+			</tr>      
+		</table>
+		<br>
+
+		<span>Paper Info:</span>
+		<table class="table table-bordered">
+			<tr class="mauXanh">
+				<th>List</th>
+				<th>Details</th>
+			</tr>
+			<tr>
+
+				<td>PID</td>
+				<td>
+					<?php echo $this->paper['id']; ?>
+					<input type="hidden" name="paper[id]" value="<?php echo $this->paper['id']; ?>">
+				</td>
+			</tr>
+			<tr>
+				<td>Paper title:</td>
+				<td>
+					<div class="form-group">
+						<input type="text" class="form-control" name="paper[title]" value="<?php echo $this->paper['title'] ?>" required <?php echo $this->disable; ?>>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Keywords:</td>
+				<td>
+					<div class="form-group">
+						<input type="text" class="form-control" name="paper[keywords]" value="<?php echo $this->paper['keywords'] ?>" required <?php echo $this->disable; ?>>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Presentation:</td>
+				<td>
+					<div class="checkbox">
+						<label><input type="checkbox" name="paper[vehicle]" value="oral" <?php if ($this->paper['vehicle'] == 'oral') echo 'checked'; ?> <?php echo $this->disable; ?>> Oral presentation</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name="paper[vehicle]" value="poster" <?php if ($this->paper['vehicle'] == 'poster') echo 'checked'; ?> <?php echo $this->disable; ?>> Poster presentation</label>
+					</div>
+				</td>
+			</tr>
+			<?php $primary_areas = array(
+				'Advanced materials, material applications towards sustainability', 
+				'Materials machining and processing technologies for reduction of environmental impact',
+				'Life cycle engineering, impact assessment and control for machines and processes',
+				'Sustainable machine design: mechatronics, CAD/CAM/CAE, maritime engineering',
+				'Industrial engineering towards sustainability',
+				'Low carbon industry, efficient systems, energy efficiency and energy saving',
+				'Renewable energy, alternative fuels',
+				'Others');?>
+				<tr>
+					<td>Primary area:</td>
+					<td><select name="paper[primary_area]" <?php echo $this->disable; ?>> 
+						<?php foreach ($primary_areas as $primary_area):?>
+							<option value="<?php echo $primary_area; ?>" <?php if($this->paper['primary_area'] == $primary_area) echo 'selected'; ?>><?php echo $primary_area; ?></option>
+						<?php endforeach;?>
+					</select></td>
+				</tr>
+				<?php $secondary_areas = array(
+					'Advanced materials, material applications towards sustainability',
+					'Materials machining and processing technologies for reduction of environmental impact',
+					'Life cycle engineering, impact assessment and control for machines and processes',
+					'Sustainable machine design: mechatronics, CAD/CAM/CAE, maritime engineering',
+					'Industrial engineering towards sustainability',
+					'Low carbon industry, efficient systems, energy efficiency and energy saving',
+					'Renewable energy, alternative fuels',
+					'Others'
+					);
+
+					?>
+					<tr>
+						<td>Secondary area:</td>
+						<td><select name="paper[secondary_area]" <?php echo $this->disable; ?>>
+							<?php foreach ($secondary_areas as $secondary_area):?>
+								<option value="<?php echo $secondary_area; ?>" <?php if($this->paper['secondary_area'] == $secondary_area) echo 'selected'; ?>><?php echo $secondary_area; ?></option>
+							<?php endforeach;?>
+						</select></td>
+					</tr>
+				</table>           
+				<br>
+			</table>
+			<?php if($this->user['id'] == $this->paper['user_id']):?>
+				<button class="btn btn-success" type="submit">Save</button>
+			<?php endif;?>
+
+			<!-- Refuse review -->
+			<?php if($this->user['type'] == 1):?>
+				<span>Refuse to review: </span>
+				<button class="btn btn-danger" type="submit" name="paper[type]" value="3" onclick="return confirm('Are you sure you want to refuse review this paper?')">Refuse</button>		
+			<?php endif;?>
+
+			<!-- Set reviewer -->
+			<?php if($this->user['type'] == 2):?>
+				<span>Assign reviewers</span><br>
+				<span>Reviewer 1:</span>
+				<select name="review_1">			
+					<?php foreach($this->reviewers as $reviewer):?>
+						<option value="<?php echo $reviewer['id']?>" <?php if($reviewer['id'] == $this->paper['review_1']) echo "selected";?>><?php echo $reviewer['firstname'] . ' ' . $reviewer['lastname']?></option>
+					<?php endforeach;?>
+				</select>
+				<span>&nbsp;&nbsp;&nbsp;Reviewer 2:</span>
+				<select name="review_2">
+					<?php foreach($this->reviewers as $reviewer):?>
+						<option value="<?php echo $reviewer['id']?>" <?php if($reviewer['id'] == $this->paper['review_2']) echo "selected";?>><?php echo $reviewer['firstname'] . ' ' . $reviewer['lastname']?></option>
+					<?php endforeach;?>
+				</select>
+				<button class="btn btn-primary" type="submit" name="paper[type]" value="4" onclick="return confirm('Are you sure you want to assign this paper for this reviewers?')">Assign</button>
+			<?php endif;?>
+			<?php 
+			$now = time();
+        $date = '2017/11/01'; # deadline
+        if (strtotime($date) < $now) { ?>
+        <br>
+        <br>
+        <span>Recommended</span><br>
+        <table class="table table-bordered">
+        	<!-- Show reviewer 1 -->
+        	<?php if($this->paper['review_1'] == $this->user['id'] || $this->user['type'] == 0  || $this->user['type'] == 2) { ?>
+        	<tr>
+        		<th>Reviewer 1</th>
+        		<td>
+        			<?php if ($this->user['type'] == 1) { ?>
+        			<span>Upload comment:</span> <label for="paper-comment-review1"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+        			<input type="file" id="paper-comment-review1" class="select-file" name="paper[comment_review1]">                         
+        			<?php } ?>                 	
+        			<span>&nbsp;&nbsp;&nbsp;Download comment:</span> <a href="<?php echo $this->paper['comment_review1']; ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
+        			<?php if ($this->paper['review_type_1'] == 2) { ?>
+        			<span class="paperUpload">&nbsp;&nbsp;&nbsp; Rejected &nbsp;&nbsp;&nbsp;</span>
+        			<?php } elseif ($this->paper['review_type_1'] == 1) { ?>
+        			<span class="paperAvai">&nbsp;&nbsp;&nbsp; Approve &nbsp;&nbsp;&nbsp;</span>
+        			<?php } ?>
+        			<?php if ($this->user['type'] == 1) { ?>
+        			<br>
+        			&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" type="submit" name="paper[review_type_1]" value="1" onclick="return confirm('Are you sure you want to Approve this paper?')">Recommend/Approve</button>
+        			&nbsp;&nbsp;&nbsp;<button class="btn btn-danger" type="submit" name="paper[review_type_1]" value="2" onclick="return confirm('Are you sure you want to Reject this paper?')">Reject</button>
+        			<?php } ?> 
+        		</td>
+        	</tr>
+        	<?php }?> 
+
+        	<!-- Show reviewer 2 -->
+        	<?php if($this->paper['review_2'] == $this->user['id'] || $this->user['type'] == 0  || $this->user['type'] == 2) { ?>
+        	<tr>
+        		<th>Reviewer 2</th>
+        		<td>
+        			<?php if ($this->user['type'] == 1) { ?>
+        			<span>Upload comment:</span> <label for="paper-comment-review2"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+        			<input type="file" id="paper-comment-review2" class="select-file" name="paper[comment_review2]">                         
+        			<?php } ?>                 	
+        			<span>&nbsp;&nbsp;&nbsp;Download comment:</span> <a href="<?php echo $this->paper['comment_review2']; ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
+        			<?php if ($this->paper['review_type_2'] == 2) { ?>
+        			<span class="paperUpload">&nbsp;&nbsp;&nbsp;Rejected &nbsp;&nbsp;&nbsp;</span>
+        			<?php } elseif ($this->paper['review_type_2'] == 1) { ?>
+        			<span class="paperAvai">&nbsp;&nbsp;&nbsp; Approve &nbsp;&nbsp;&nbsp;</span>
+        			<?php } ?>
+        			<?php if ($this->user['type'] == 1) { ?>
+        			<br>
+        			&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" type="submit" name="paper[review_type_2]" value="1" onclick="return confirm('Are you sure you want to Approve this paper?')">Recommend/Approve</button>
+        			&nbsp;&nbsp;&nbsp;<button class="btn btn-danger" type="submit" name="paper[review_type_2]" value="2" onclick="return confirm('Are you sure you want to reject this paper?')">Reject</button>
+        			<?php } ?> 
+        		</td>
+        	</tr>
+        	<?php } ?> 
+        </table>	
+        <?php } ?> 
+        <br>
+        <br>
+        <?php if($this->user['type'] == 2):?>
+        	<!-- <span>Conclude</span><br>
+        	<div class="form-group">
+        		<textarea type="text" class="form-control" name="paper[notifi]"></textarea>
+        	</div> -->
+        	<button class="btn btn-success" type="submit">Save</button>
+        	<button class="btn btn-primary" type="submit" name="paper[type]" value="1" onclick="return confirm('Are you sure you want to approve this paper?')">Approved</button>
+        	<button class="btn btn-danger" type="submit" name="paper[type]" value="2" onclick="return confirm('Are you sure you want to reject this paper?')">Reject</button>
+        <?php endif;?>
+        <?php if($this->user['type'] == 1){ ?>
+        <button class="btn btn-success" type="submit">Save</button>
+        <?php } ?>
+    </form>
+</div>
+<div id="updated_content" style="display: none;"><?php echo $this->updated_content; ?></div>
+<script type="text/javascript">
+	var content = $('#updated_content').text().replace(/\|/g, '\n');		
+	console.log(content);
+	if(content.trim().length > 0)
+	alert(content);
+</script>

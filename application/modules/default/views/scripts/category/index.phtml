@@ -1,0 +1,38 @@
+<h1>
+    Categories
+</h1>
+<a href="/category/new" class="pull-right">+ Add category</a>
+<div class="row"></div>
+<table class="table table-hover tableCate">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $order = 1;
+        foreach ($this->categories as $category):
+            ?>
+            <tr id="category-<?php echo $category['id']; ?>">
+                <td><?php echo $order++; ?></td>
+                <td class="id"><?php echo $category['id']; ?></td>
+                <td class="name title"><?php echo $category['name']; ?></td>
+                <td class="content"><?php echo $category['content']; ?></td>
+                <td><a href="/category/edit?id=<?php echo $category['id'];?>" >Edit</a> <a href="#remove" class="remove_object">Remove</a></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<?php
+echo $this->partial("layout/modal_info.phtml", array('title' => 'Add category ',
+    'fields' => array(
+        'Name' => 'name',
+        'description' => array('type' => 'area', 'option' => 'Description')
+    ),
+    'controller_name' => 'category'));
+echo $this->partial("layout/modal_remove.phtml", array('title' => 'Remove category '));
+

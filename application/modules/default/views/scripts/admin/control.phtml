@@ -1,0 +1,35 @@
+<div class="container container-products">
+	<h2>Quản trị website</h2>
+	<hr>
+	<div class="list-group">
+		<?php if($this->user['type'] == 2):?>
+			<h3>Quản lý Người dùng</h3>
+			<a href="/user/" class="list-group-item">Danh sách người dùng</a>
+			<!-- <a href="/admin/users" class="list-group-item">Phê duyệt đăng ký quản lý CLB</a> -->
+			<hr>
+			<h3>Quản lý CLB</h3>
+			<a href="/clubs/new" class="list-group-item">Thêm CLB mới</a>
+			<a href="/clubs/" class="list-group-item">Danh sách CLB</a>
+			<hr>
+			<h3>Quản lý Sản phẩm</h3>
+			<a href="/products/new" class="list-group-item">Thêm Sản phẩm mới</a>
+			<a href="/products/" class="list-group-item">Danh sách Sản phẩm</a>
+			<hr>
+			<h3>Quản lý Cửa hàng</h3>
+			<a href="/store/new" class="list-group-item">Thêm Cửa hàng mới</a>
+			<a href="/store/" class="list-group-item">Danh sách Cửa hàng</a>
+			<br>
+
+		<!-- <div class="row"><a href="/admin/export-user-data" target="_blank"><button type="button" class="btn btn-primary col-md-12">Tải danh sách Câu lạc bộ</button></a><br></div><br>
+			<div class="row"><a href="/admin/export-paper-data?id=<?php echo $user['id']?>" target="_blank"><button type="button" class="btn btn-info col-md-12">Tải danh sách Người dùng</button></a></div> -->
+		<?php endif;?>
+		<?php if($this->user['type'] == 1):?>
+			<h3>Quản lý CLB</h3>
+			<a href="/clubs/new" class="list-group-item">Thêm CLB mới</a>
+			<a href="/clubs/" class="list-group-item">Danh sách CLB</a>
+			<h3>Quản lý Sản phẩm</h3>
+			<a href="/products/new" class="list-group-item">Thêm Sản phẩm mới</a>
+			<a href="/products/" class="list-group-item">Danh sách Sản phẩm</a>
+		<?php endif;?>
+	</div>
+</div>

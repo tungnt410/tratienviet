@@ -1,0 +1,9 @@
+<h1>
+    Edit new newspaper
+</h1>
+<div class="row"></div>
+
+<?php echo $this->partial("news/form.phtml", array('action' => '/news/update', 'categories' => $this->categories, 'news' => $this->news)); ?>
+
+
+

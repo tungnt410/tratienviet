@@ -1,0 +1,156 @@
+<div class="contentVMT">
+    <!--     <a class="removePaper" href="/">Withdraw this paper</a><br><br> -->
+    <span>Paper Status / Action</span>
+    <form action="/paper/create" method="post" enctype="multipart/form-data" onsubmit="return(uploadFile());">
+        <table class="table table-bordered">
+            <tr class="mauXanh">
+                <th>1. Abstract</th>
+                <th>2. Full paper</th>
+                <th>3. Copyright form</th>
+                <th>4. Biography</th>
+                <th>5. Presentation</th>
+                <th>6. Invitation letter</th>
+            </tr>
+            <tr>
+                <td>
+                            <label for="paper-file"><a><marquee scrollamount="160" scrolldelay="4000">Upload Abstract <i class="fa fa-pencil-square-o" aria-hidden="true"></i></marquee></a></label>
+                            <input type="file" id="paper-file" class="select-file" name="paper[file]" >
+                        </td>
+                        <td>
+                            <?php 
+                            $now = time();
+                        $date = '2018/02/01'; # deadline
+
+                        if (strtotime($date) > $now) { 
+                            ?>
+                            <label for="fullPaper-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Upload Full paper</a></label>
+                            <input type="file" id="fullPaper-file" class="select-file" name="paper[fullPaper]" >
+                            <?php    } else { } ?>
+
+                        </td>
+                        <td>Copyright upload <label for="copyright-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+                            <input type="file" id="copyright-file" class="select-file" name="paper[copyright]" >
+                        </td>
+                        <td>Biography <label for="biography-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+                            <input type="file" id="biography-file" class="select-file" name="paper[biography]" >
+                        </td>
+                        <td>Presentation <label for="presen-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></label>
+                            <input type="file" id="presen-file" class="select-file" name="paper[presen]" >
+                        </td>
+                        <td>Invitation letter</td>
+                    </tr>
+                </table>     
+                <span class="pull-right" style="color: red; text-align: right;">“Please use the conference <a href="http://mmms2018.hust.edu.vn/category/show?id=11" target="_blank"> template for abstract</a>.”</span>
+                <br>
+                <br>
+
+
+                <span>Corresponding Author:</span>
+                <table class="table table-bordered">
+                    <tr>
+                        <th class="mauXanh">Title</th>
+                        <th style="font-weight: normal;"><input style="width: 100%;" type="text" name="author[title]" value="Academic"></th>
+                    </tr>
+                    <tr>
+                        <td class="mauXanh" style="font-weight: bold;">Name</td>
+                        <td><input style="width: 100%;" type="text" name="author[name]" value="Name" required><br></td>
+                    </tr>
+                    <tr>
+                        <td class="mauXanh" style="font-weight: bold;">Affiliation</td>
+                        <td><input style="width: 100%;" type="text" name="author[affiliation]" value="Affiliation" required><br></td>
+                    </tr>
+                    <tr>
+                        <td class="mauXanh" style="font-weight: bold;">Email</td>
+                        <td><input style="width: 100%;" type="email" name="author[email]" required></td>
+                    </tr>
+                    <tr>
+                        <td class="mauXanh" style="font-weight: bold;">Telephone</td>
+                        <td><input style="width: 100%;" type="text" name="author[phone]" required></td>
+                    </tr>
+                    <tr>
+                        <td class="mauXanh" style="font-weight: bold;">Postal Address</td>
+                        <td><input style="width: 100%;" type="text" name="author[postal]" required></td>
+                    </tr>
+                    <tr>
+                        <td class="mauXanh" style="font-weight: bold;">Country</td>
+                        <td><input style="width: 100%;" type="text" name="author[country]" value="Country" required></td>
+                    </tr>      
+                </table>
+                <br><br><br>
+                <span>Paper Info:</span>
+                <table class="table table-bordered">
+                    <tr class="mauXanh">
+                        <th>List</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>PID</td>
+                        <td><a></a></td>
+                    </tr>
+                    <tr>
+                        <td>Paper title:</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="paper[title]" value="" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Keywords:</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="paper[keywords]" value="" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Presentation:</td>
+                        <td>
+                            <fieldset>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="paper[vehicle]" value="oral" > Oral presentation</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="paper[vehicle]" value="poster" > Poster presentation</label>
+                                </div>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Primary area:</td>
+                        <td><select name="paper[primary_area]">
+                           <option value="Advanced materials, material applications towards sustainability">Advanced materials, material applications towards sustainability</option>
+                           <option value="Materials machining and processing technologies for reduction of environmental impact">Materials machining and processing technologies for reduction of environmental impact</option>
+                           <option value="Life cycle engineering, impact assessment and control for machines and processes">Life cycle engineering, impact assessment and control for machines and processes</option>
+                           <option value="Sustainable machine design: mechatronics, CAD/CAM/CAE, maritime engineering">Sustainable machine design: mechatronics, CAD/CAM/CAE, maritime engineering</option>
+                           <option value="Industrial engineering towards sustainability">Industrial engineering towards sustainability</option>
+                           <option value="Low carbon industry, efficient systems, energy efficiency and energy saving">Low carbon industry, efficient systems, energy efficiency and energy saving</option>
+                           <option value="Renewable energy, alternative fuels">Renewable energy, alternative fuels</option>
+                           <option value="Others">Others</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                    <td>Secondary area:</td>
+                    <td><select name="paper[secondary_area]">
+                        <option value="Advanced materials, material applications towards sustainability">Advanced materials, material applications towards sustainability</option>
+                        <option value="Materials machining and processing technologies for reduction of environmental impact">Materials machining and processing technologies for reduction of environmental impact</option>
+                        <option value="Life cycle engineering, impact assessment and control for machines and processes">Life cycle engineering, impact assessment and control for machines and processes</option>
+                        <option value="Sustainable machine design: mechatronics, CAD/CAM/CAE, maritime engineering">Sustainable machine design: mechatronics, CAD/CAM/CAE, maritime engineering</option>
+                        <option value="Industrial engineering towards sustainability">Industrial engineering towards sustainability</option>
+                        <option value="Low carbon industry, efficient systems, energy efficiency and energy saving">Low carbon industry, efficient systems, energy efficiency and energy saving</option>
+                        <option value="Renewable energy, alternative fuels">Renewable energy, alternative fuels</option>
+                        <option value="Others">Others</option>
+                    </select></td>
+
+                </tr>
+                <!-- <tr>
+                	<td>Upload Abstract
+                            
+                        </td>
+                        <td><label for="paper-file"><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Upload here</a></label>
+                            <input type="file" id="paper-file" class="select-file" name="paper[file]" ></td>
+                </tr> -->
+            </table>           
+            <button class="btn btn-success" type="submit" name="save">Save</button>
+        </form>
+    </div>

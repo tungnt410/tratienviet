@@ -1,0 +1,37 @@
+<div class="container container-products">
+    <h1 id="type-action" data-type-name="<?php echo $this->type_name; ?>">
+        Danh sách bản audio
+    </h1>
+    <div class="row"></div>
+
+    <?php echo $this->partial("layout/search.phtml", array('fields' => array('name' => 'Tên'))); ?>
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tên</th>
+                <th>Url</th>
+                <th></th>
+            </tr>
+            <?php echo $this->partial("audio/info.phtml", array('order' => 0, 'voice' => array(), 'class' => 'info-pattern')); ?>
+        </thead>
+        <tbody>
+            <?php
+            $order = 1;
+            foreach ($this->audiofiles as $audio) {
+                echo $this->partial("audio/info.phtml", array('order' => $order, 'audio' => $audio));
+                $order++;
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
+<?php
+echo $this->partial("layout/process_syn.phtml", array());
+echo $this->partial("layout/modal_info.phtml", array('title' => 'Thêm phụ đề', 'action' => '/audio/',
+    'fields' => array('name' => array('type' => 'fileUpload', 'option' => 'Audio')),
+    'controller_name' => 'audio'));
+echo $this->partial("layout/modal_remove.phtml", array('title' => 'Xóa bản audio '));
+

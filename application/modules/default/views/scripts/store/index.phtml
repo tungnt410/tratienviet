@@ -1,0 +1,38 @@
+<div class="container container-products">
+    <h2>Danh sách Cửa hàng</h2>
+    <hr>
+    <div class="row"></div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tên cửa hàng</th>
+                <th>Mô tả</th>
+                <th>Status</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $order = 1;
+            foreach ($this->store as $stores):
+                ?>
+                <tr id="stores-<?php echo $stores['id']; ?>">
+                    <td><?php echo $order++; ?></td>
+                    <td class="id"><?php echo $stores['id']; ?></td>
+                    <td class="name"><a href="/store/edit?id=<?php echo $stores['id']; ?>"><?php echo $stores['name']; ?></a></td>
+                    <td class="description"><?php echo $stores['description']; ?></td>
+                    <td class="act"><?php echo $stores['active']; ?></td>
+                    <td><a href="/store/edit?id=<?php echo $stores['id']; ?>">Edit</a> <a href="#remove" class="remove_object">Remove</a></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php
+echo $this->partial("layout/modal_info.phtml", array('title' => 'Upload stores', 'action' => '/stores/',
+    'fields' => array('name' => array('type' => 'fileUpload', 'option' => 'stores')),
+    'controller_name' => 'stores'));
+echo $this->partial("layout/modal_remove.phtml", array('title' => 'Remove stores '));
+

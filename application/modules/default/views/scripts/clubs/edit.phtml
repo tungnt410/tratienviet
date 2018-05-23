@@ -1,0 +1,69 @@
+<div class="container container-products">
+    <form class="form-horizontal" method="post" action="/clubs/update">
+        <input type="hidden" name="id" value="<?php echo $this->clubs['id']; ?>">
+        <h2>Thay đổi thông tin CLB</h2>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="name">Tên Câu lạc bộ:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="name" name="name" required value="<?php echo $this->clubs['name']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="description">Mô tả về Câu lạc bộ:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="description" name="description" value="<?php echo $this->clubs['description']; ?>">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="rule_description">Quyền lợi câu lạc bộ:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="rule_description" name="rule_description" required value="<?php echo $this->clubs['rule_description']; ?>">
+            </div>
+        </div>
+        <hr>
+        <h2>Quản lý CLB</h2>
+        <?php if($_SESSION['type'] == 2):?>
+            <?php if($this->clubs['active'] == 1):?>
+                <td><button class="btn btn-danger " type="submit" name="active" value="2" onclick="return confirm('Dừng hoạt động CLB này?')">Dừng hoạt động CLB</button></td>
+            <?php endif;?>
+            <?php if($this->clubs['active'] == 2):?>
+               <td><button class="btn btn-primary" type="submit" name="active" value="1" onclick="return confirm('Cho phép CLB này hoạt động?')">Cho phép hoạt động CLB</button></td>
+           <?php endif;?>
+       <?php endif;?>
+       <hr>
+       <h2>Danh sách thành viên</h2>
+       <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Paper name</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $order = 1;
+
+            foreach ($this->club_has_users as $club_has_user):
+                ?>
+                <tr id="club_has_user-<?php echo $club_has_user['id']; ?>">
+                    <td><?php echo $order++; ?></td>
+                    <td class="id"><?php echo $club_has_user['id']; ?></td>
+                    <td class="name title"><a href="/index/edit?id=<?php echo $club_has_user['id']; ?>"><?php echo $club_has_user['title']; ?></a></td>
+                    <td><a href="/index/edit?id=<?php echo $club_has_user['id']; ?>">Edit</a> <a href="#remove" class="remove_object">Remove</a></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <div class="form-group"> 
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-success center-block">THAY ĐỔI</button>
+        </div>
+    </div>
+</form>
+</div>
+<?php
+echo $this->partial("layout/modal_notice.phtml", array('title' => 'Notice',));
+?>

@@ -1,0 +1,44 @@
+<div class="container container-products">
+<h1>
+    Danh sách sản phẩm
+</h1>
+
+<div class="row"></div>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Tên sản phẩm</th>
+            <th>Mô tả</th>
+            <th>Ảnh sản phẩm</th>
+            <th>Giá</th>
+            <th>Trạng thái</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $order = 1;
+        foreach ($this->products as $product):
+            ?>
+            <tr id="product-<?php echo $products['id']; ?>">
+                <td><?php echo $order++; ?></td>
+                <td class="id"><?php echo $product['id']; ?></td>
+                <td class="name"><a href="/products/edit?id=<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a></td>
+                <td class="description"><?php echo $product['description']; ?></td>
+                <td class="image" style="width: 150px;"><?php echo "<img src='" . $product['images'] . "' alt='Chưa có ảnh'>";?></td>
+                <td class="price"><?php echo $product['price']; ?></td>
+                <td class="status"><?php echo $product['status']; ?></td>
+                <td><a class="btn btn-primary" href="/products/edit?id=<?php echo $product['id']; ?>">Thông tin sản phẩm</a> <a href="#remove" class="remove_object btn btn-danger">Xóa sản phẩm</a></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+</div>
+<?php
+echo $this->partial("layout/modal_info.phtml", array('title' => 'Upload product', 'action' => '/product/',
+    'fields' => array('name' => array('type' => 'fileUpload', 'option' => 'product')),
+    'controller_name' => 'product'));
+echo $this->partial("layout/modal_remove.phtml", array('title' => 'Remove product '));
+

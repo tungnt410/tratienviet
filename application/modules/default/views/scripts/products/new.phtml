@@ -1,0 +1,41 @@
+<div class="container container-products">
+    <div class="contentVMT">
+        <h2>Thêm sản phẩm mới</h2>
+        <form action="/products/create" method="post" enctype="multipart/form-data" onsubmit="return(uploadFile());">
+            <table class="table table-bordered">
+                <tr>
+                    <td>Tên sản phẩm:</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="products[name]" value="" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mô tả sản phẩm:</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="products[description]" value="" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ảnh sản phẩm:</td>
+                    <td class="btn btn-default image-preview-input">
+                        <input type="file" accept="image/png, image/jpeg, image/gif" name="products[images]"/>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Giá sản phẩm:</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="products[price]" value="" required>
+                        </div>
+                    </td>
+                </tr>
+            </table>           
+            <button class="btn btn-success" type="submit" name="save">TẠO MỚI</button>
+        </form>
+    </div>
+</div>

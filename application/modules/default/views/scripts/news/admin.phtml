@@ -1,0 +1,40 @@
+<h1>
+    Newspapers
+</h1>
+<a href="/news/new" class="pull-right">+ Add newspaper</a>
+<div class="row"></div>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Author</th>
+            <th>Created</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $order = 1;
+        foreach ($this->newspapers as $news):
+            ?>
+            <tr id="news-<?php echo $news['id']; ?>">
+                <td><?php echo $order++; ?></td>
+                <td class="id"><?php echo $news['id']; ?></td>
+                <td class="name title"><a href="/news/show?id=<?php echo $news['id']; ?>"><?php echo $news['title']; ?></a><?php if ($news['type'] == 1) : ?> <span style="color: red;">(Hot)</span><?php endif; ?></td>
+                <td class="category"><a href="/category/show?id=<?php echo $news['category_id'] ?>"><?php echo $news['category']; ?></a></td>
+                <td class="user"><?php echo $news['name']; ?></td>
+                <td class="created"><?php echo $news['created_at']; ?></td>
+                <td class="action"><a href="/news/edit?id=<?php echo $news['id']; ?>">Edit</a> <a href="#remove" class="remove_object">Remove</a></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<?php
+echo $this->partial("layout/modal_info.phtml", array('title' => 'Add news ',
+    'fields' => array(),
+    'controller_name' => 'news'));
+echo $this->partial("layout/modal_remove.phtml", array('title' => 'Remove newspaper '));
+?>
+

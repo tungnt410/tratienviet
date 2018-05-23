@@ -1,0 +1,67 @@
+<div class="container container-products">
+    <form class="form-horizontal" method="post" action="/user/update">
+        <input type="hidden" name="id" value="<?php echo $this->user['id']; ?>">
+        <h2>Nhập thông tin cá nhân của bạn</h2>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="name">Tên(*):</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="name" placeholder="Enter your first name" name="name" required value="<?php echo $this->user['name']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="telephone">Điện thoại:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="telephone" placeholder="Enter your telephone" name="telephone" value="<?php echo $this->user['telephone']; ?>">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="address">Địa chỉ(*):</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="address" placeholder="Enter your address" name="address" required value="<?php echo $this->user['address']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="email">Email (*):</label>
+            <div class="col-sm-9">
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required value="<?php echo $this->user['email']; ?>">
+            </div>
+        </div>
+        <hr>
+        <h2>Quản lý tài khoản</h2>
+        <?php if($_SESSION['type'] == 2):?>
+            <?php if($this->user['type'] == 1):?>
+                <td><button class="btn btn-danger " type="submit" name="type" value="0" onclick="return confirm('Hủy quyền Chủ câu lạc bộ người dùng này?')">Hủy quyền Chủ câu lạc bộ</button></td>
+            <?php endif;?>
+            <?php if($this->user['type'] == 3):?>
+                <td><button class="btn btn-success" type="submit" name="type" value="1" onclick="return confirm('Đồng ý cho người dùng này thành Chủ câu lạc bộ?')">Cấp quyền Chủ câu lạc bộ</button></td>
+            <?php endif;?>
+            <?php if($this->user['active'] == 1):?>
+                <td><button class="btn btn-danger" type="submit" name="user[active]" value="0" onclick="return confirm('Bạn muốn khóa tài khoản này?')">Khóa tài khoản</button></td>
+            <?php endif;?>
+            <?php if($this->user['active'] == 0):?>
+                <td><button class="btn btn-primary" type="submit" name="user[active]" value="1" onclick="return confirm('Bạn muốn mở khóa tài khoản này?')">Mở khóa tài khoản</button></td>
+            <?php endif;?>
+        <?php endif;?>
+        <hr>
+        <?php if($_SESSION['type'] == 0):?>
+            <td><button class="btn btn-primary " type="submit" name="type" value="3" onclick="return confirm('Đăng ký làm chủ Câu lạc bộ?')">Đăng ký làm chủ Câu lạc bộ</button></td>
+        <?php endif;?>
+        <hr>
+        <p>Reset your password</p>
+        <div class="form-group">
+            <div class="checkbox">
+                <label><input type="checkbox" name="reset_password" value="1"> Reset password</label>
+            </div>
+        </div>
+        <div class="form-group"> 
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-success center-block">UPDATE MY ACCOUNT</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<?php
+echo $this->partial("layout/modal_notice.phtml", array('title' => 'Notice',));
+?>
