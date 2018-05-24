@@ -142,6 +142,7 @@ class UserController extends Amobi_Controller_Action {
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['type'] = $user['type'];
                 $_SESSION['session'] = $user['session'];
+                // var_dump($params);die();
                 $this->_helper->redirector('index', 'index', 'default', array());
             }
         }
