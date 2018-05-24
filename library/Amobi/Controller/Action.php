@@ -36,15 +36,21 @@ class Amobi_Controller_Action extends Zend_Controller_Action {
 
     private function auth() {
         Zend_Loader::loadClass('Model_User');
+        $_SESSION['type'] = -1;
         $modelUser = new Model_User();
         try {
-            $this->_user = $modelUser->find($_SESSION['id'])->current();            
-            if($this->_user == null){
-                throw new Exception("User not find", 1);                
-            }
+        	if (!isset($_SESSION['id'])) {
+        		$_SESSION['id'] = 0;
+        	}
+        	$users = $modelUser->find($_SESSION['id']);
+        	if(count($users) === 0){
+                throw new Exception("User not find", 1);                            
+        	}
+        	$this->_user = $users[0];	            
             $this->checkSession();            
             $GLOBALS['name'] = $this->_user['name'];
             $GLOBALS['email'] = $this->_user['email'];
+            $_SESSION['type'] = $this->_user['type'];
         } catch (Exception $exc) {
             if (in_array($this->_action, $this->_action_non_auth)) {
                 return;

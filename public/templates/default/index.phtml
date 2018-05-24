@@ -35,7 +35,7 @@
 					<li> <a href="/admin/control">Quản trị</li></a>
 					<li>/</li>
 					<li><a href="/user/logout">Đăng xuất</a></li>                            
-					<?php } elseif ($_SESSION['type'] != NULL && $_SESSION['type'] == 0) { ?>
+					<?php } elseif ($_SESSION['type'] == 0) { ?>
 					<li><a href="/user/edit"><strong><?php echo $GLOBALS['name']; ?></strong></a></li> 
 					<li>/</li>
 					<li><a href="/user/logout">Đăng xuất</a></li>
