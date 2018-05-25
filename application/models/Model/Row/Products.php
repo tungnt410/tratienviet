@@ -7,13 +7,10 @@
  */
 
 /**
- * Description of Audio
+ * Description of Products
  *
- * @author YINLONG
+ * @author tungx
  */
-Zend_Loader::loadClass('Model_Application');
-class Model_Paper extends Model_Application{
+class Model_Row_Products {
     //put your code here
-    protected $_name = "paper";
-    protected $_primary = "id";
 }
