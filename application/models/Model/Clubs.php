@@ -16,4 +16,5 @@ class Model_Clubs extends Model_Application{
     //put your code here
     protected $_name = "clubs";
     protected $_primary = "id";
+    protected $_rowClass = 'Model_Row_Products';
 }
