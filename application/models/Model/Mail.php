@@ -29,7 +29,7 @@ class Model_Mail {
         $transport = new Zend_Mail_Transport_Smtp($mail_config["mail.host"], $this->config);
         $mail = new Zend_Mail("UTF-8");
         $mail->setBodyHtml($content);
-        $mail->setFrom($this->config['username'], 'MMMS 2018');
+        $mail->setFrom($this->config['username'], 'Trả Tiền Việt');
         $mail->addTo($email);
         $mail->setSubject($subject);
         $mail->send($transport);
