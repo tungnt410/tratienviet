@@ -19,6 +19,7 @@ class Model_User extends Model_Application {
     protected $_primary = "id";
     
     function generateRandomString($length = 10) {
+        echo $length;
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';

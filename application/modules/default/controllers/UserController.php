@@ -3,7 +3,9 @@
 class UserController extends Amobi_Controller_Action {
 
     public function init() {
-        $this->_action_non_auth = array('login', 'forgot', 'resetpassword', 'updatepassword', 'signup', 'create');
+        $this->_action_non_auth = array('login', 'forgot', 'resetpassword',
+            'updatepassword', 'signup', 'create',
+            'create-api', 'active-api');
         parent::init();
         Zend_Loader::loadClass('Model_User');
         $this->_model = new Model_User();
@@ -27,6 +29,7 @@ class UserController extends Amobi_Controller_Action {
             $this->_helper->redirector('index', 'user', 'default', array());
         }
     }
+
     public function createAction() {
         $param = $this->_arrParam;
         $param['id'] = null;
@@ -49,8 +52,31 @@ class UserController extends Amobi_Controller_Action {
         }
     }
 
-    public function signupAction() {
+    public function createApiAction() {
+        $this->_helper->layout()->disableLayout();
+        $param = $this->_arrParam;
+        $param['id'] = null;
 
+        $password = $this->_model->generateRandomString(5) . time();
+        $param['password_by_system'] = md5($password);
+        unset($param['reset_password']);
+        $id = $this->_model->save($param);
+        if ($id == -1) {
+            $this->view->result = json_encode(array('status' => 2, 'message' => 'Email đã tồn tại'));
+        } else {
+            try {
+                Zend_Loader::loadClass('Model_Mail');
+                $mailModel = new Model_Mail();
+                $mailModel->sendEmail($param['email'], 'Active account', $this->createEmailForActiveEmail($password, $param['password_by_system']));
+            } catch (Exception $e) {
+                
+            }
+            $this->view->result = json_encode(array('status' => 1, 'id' => $id));
+        }
+    }
+
+    public function signupAction() {
+        
     }
 
     public function editAction() {
@@ -60,11 +86,10 @@ class UserController extends Amobi_Controller_Action {
             $this->view->user = $user->current();
         }
         $this->view->updated_content = '';
-        if(isset($_SESSION['updated_content'])){
+        if (isset($_SESSION['updated_content'])) {
             $this->view->updated_content = $_SESSION['updated_content'];
-            unset($_SESSION['updated_content']);   
+            unset($_SESSION['updated_content']);
         }
-
     }
 
     public function updateAction() {
@@ -131,6 +156,32 @@ class UserController extends Amobi_Controller_Action {
         }
     }
 
+    public function activeApiAction() {
+        $this->_helper->layout()->disableLayout();
+        $param = $this->_arrParam;
+        $users = $this->_model->fetchAll("password_by_system = '" . md5($param['password']) . "'");
+        if (count($users) == 0) {
+            $this->view->result = json_encode(array('status' => 2,
+                'message' => 'Tài khoản đã đước kích hoạt trước đó'));
+        } else {
+            $this->view->result = json_encode(array('status' => 1));
+        }
+    }
+
+    public function updatePasswordApiAction() {
+        $this->_helper->layout()->disableLayout();
+        $param = $this->_arrParam;
+        $users = $this->_model->fetchAll("password_by_system = '" . md5($param['current_password']) . "'");
+        if (count($users) == 0) {
+            $this->view->result = json_encode(array('status' => 2,
+                'message' => 'Tài khoản đã đước kích hoạt trước đó'));
+        } else {
+            $params = array('id' => $users[0]['id'], 'password_by_system' => NULL, 'password' => md5($param['password']));
+            $this->_model->save($params);
+            $this->view->result = json_encode(array('status' => 1));
+        }
+    }
+
     public function loginAction() {
         $param = $this->_arrParam;
         if (key_exists('email', $param) && key_exists('password', $param)) {
@@ -157,9 +208,13 @@ class UserController extends Amobi_Controller_Action {
             } else {
                 $this->view->email = $param['email'];
                 $param = array();
-                $password = $this->_model->generateRandomString(5) . time();
+                $time = time() . "";
+                $password = $this->_model->generateRandomString(3)
+                        . substr($time, strlen($time) - 3);
+
                 $param['password_by_system'] = md5($password);
-                $param['password'] = md5($this->_model->generateRandomString(5) . time());
+                $param['password'] = md5($this->_model->generateRandomString(1)
+                        . substr($time, strlen($time) - 3));
                 $param['id'] = $user[0]['id'];
                 $this->_model->save($param);
                 Zend_Loader::loadClass('Model_Mail');
@@ -171,13 +226,12 @@ class UserController extends Amobi_Controller_Action {
     }
 
     public function resultforgotAction() {
-
+        
     }
 
     public function logoutAction() {
         $this->logout();
         $this->_helper->redirector('login', 'user', 'default', array());
-        
     }
 
     private function logout() {
