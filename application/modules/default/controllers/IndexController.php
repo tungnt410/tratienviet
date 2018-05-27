@@ -5,8 +5,8 @@ class IndexController extends Amobi_Controller_Action {
     public function init() {
         $this->_action_non_auth = array('index');
         parent::init();
-        Zend_Loader::loadClass('Model_Products');
-        $this->_model = new Model_Products();
+        Zend_Loader::loadClass('Model_Product');
+        $this->_model = new Model_Product();
         
     }
 

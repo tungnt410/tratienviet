@@ -58,16 +58,16 @@ class Amobi_Controller_Action extends Zend_Controller_Action {
             $this->_helper->redirector('login', 'user', 'default', array());
         }
 
-        Zend_Loader::loadClass('Model_Clubs');
-        $modelClubs = new Model_Clubs();
+        Zend_Loader::loadClass('Model_Club');
+        $modelClubs = new Model_Club();
         $this->_clubs = $modelClubs->find($_SESSION['id'])->current();
 
         Zend_Loader::loadClass('Model_Store');
         $modelStore = new Model_Store();
         $this->_store = $modelStore->find($_SESSION['id'])->current();
         
-        Zend_Loader::loadClass('Model_Products');
-        $modelProducts = new Model_Products();
+        Zend_Loader::loadClass('Model_Product');
+        $modelProducts = new Model_Product();
         $this->_products = $modelProducts->find($_SESSION['id'])->current();
     }
 
