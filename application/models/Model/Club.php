@@ -12,9 +12,9 @@
  * @author YINLONG
  */
 Zend_Loader::loadClass('Model_Application');
-class Model_Clubs extends Model_Application{
+class Model_Club extends Model_Application{
     //put your code here
-    protected $_name = "clubs";
+    protected $_name = "club";
     protected $_primary = "id";
     protected $_rowClass = 'Model_Row_Products';
 }

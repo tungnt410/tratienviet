@@ -4,8 +4,8 @@ class ClubsController extends Amobi_Controller_Action {
 
 	public function init() {
 		parent::init();
-		Zend_Loader::loadClass('Model_Clubs');
-		$this->_model = new Model_Clubs();
+		Zend_Loader::loadClass('Model_Club');
+		$this->_model = new Model_Club();
 	}
 
 	public function predisPatch() {

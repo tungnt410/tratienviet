@@ -6,8 +6,8 @@ class ProductsController extends Amobi_Controller_Action {
 
     public function init() {
         parent::init();
-        Zend_Loader::loadClass('Model_Products');
-        $this->_model = new Model_Products();
+        Zend_Loader::loadClass('Model_Product');
+        $this->_model = new Model_Product();
     }
 
     public function predisPatch() {
