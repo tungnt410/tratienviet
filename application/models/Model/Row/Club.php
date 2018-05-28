@@ -11,6 +11,11 @@
  *
  * @author tungx
  */
-class Model_Row_Products {
+class Model_Row_Club {
+
     //put your code here
+    public function toArray() {
+        echo "to array in club";
+    }
+
 }

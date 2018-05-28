@@ -19,6 +19,7 @@ class Model_Product extends Model_Application {
     protected $_name = "product";
     protected $_primary = "id";
     protected $_itemPerPage = 10;
+    protected $_rowClass = 'Model_Row_Product';
 
     public function fetchByCategory($status = -1, $category = 0, $page = 0) {
         $db = Zend_Db_Table::getDefaultAdapter();
@@ -30,6 +31,18 @@ class Model_Product extends Model_Application {
             $sql = $sql->where("p.status = $status");
         }
         $sql = $sql->limit($this->_itemPerPage, $page * $this->_itemPerPage);
+        return $db->fetchAll($sql);
+    }
+
+    public function fetchByClub($club, $status = 1, $limit = 5, $page = 0) {
+        $db = Zend_Db_Table::getDefaultAdapter();
+        $sql = $db->select()->from(array('p' => $this->_name), array("p.id", "p.name", "p.slug", "p.images", "p.price"));
+        $sql = $sql->join(array("cp" => "club_has_product"), "cp.product_id = p.id", array());
+        if ($status > -1) {
+            $sql = $sql->where("p.status >= '$status'");
+        }
+        $sql = $sql->where("cp.club_id = '$club'");
+        $sql = $sql->limit($limit, $page * $this->_itemPerPage);
         return $db->fetchAll($sql);
     }
 
