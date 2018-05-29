@@ -23,7 +23,6 @@ class Model_Application extends Zend_Db_Table_Abstract {
             }
             return $this->update($param, array('id = ?' => $id));
         } catch (Exception $e) {
-        	echo $e;
             return -1;
         }
     }

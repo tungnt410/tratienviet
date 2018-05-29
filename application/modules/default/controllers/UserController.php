@@ -5,7 +5,7 @@ class UserController extends Amobi_Controller_Action {
     public function init() {
         $this->_action_non_auth = array('login', 'forgot', 'resetpassword',
             'updatepassword', 'signup', 'create',
-            'create-api', 'active-api');
+            'api-create', 'api-active', 'api-update-password', 'api-login');
         parent::init();
         Zend_Loader::loadClass('Model_User');
         $this->_model = new Model_User();
@@ -52,12 +52,13 @@ class UserController extends Amobi_Controller_Action {
         }
     }
 
-    public function createApiAction() {
+    public function apiCreateAction() {
         $this->_helper->layout()->disableLayout();
         $param = $this->_arrParam;
         $param['id'] = null;
-
-        $password = $this->_model->generateRandomString(5) . time();
+        $time = time() . "";
+        $password = $this->_model->generateRandomString(3) . substr($time, strlen($time) - 3);
+        $param['created_at'] = date("Y-m-d H:i:s");
         $param['password_by_system'] = md5($password);
         unset($param['reset_password']);
         $id = $this->_model->save($param);
@@ -104,7 +105,8 @@ class UserController extends Amobi_Controller_Action {
         unset($param['reset_password']);
         $id = $this->_model->save($param);
         if ($id == -1) {
-            $this->view->result = json_encode(array('status' => 2, 'message' => 'Email is existed'));
+            $this->view->result = json_encode(array('status' => 2,
+                'message' => 'Email is existed'));
         } else {
             $this->view->result = json_encode(array('status' => 1, 'id' => $id));
         }
@@ -134,7 +136,8 @@ class UserController extends Amobi_Controller_Action {
     public function destroyAction() {
         $this->_helper->layout()->disableLayout();
         $param = $this->_arrParam;
-        $this->view->result = json_encode(array('status' => 1, 'id' => $this->_model->delete($param)));
+        $this->view->result = json_encode(array('status' => 1,
+            'id' => $this->_model->delete($param)));
     }
 
     public function searchAction() {
@@ -150,42 +153,120 @@ class UserController extends Amobi_Controller_Action {
         $this->logout();
         $param = $this->_arrParam;
         $this->view->password = $param['password'];
-        $user = $this->_model->fetchAll("password_by_system = '" . $param['password'] . "'");
+        $user = $this->_model->fetchAll("password_by_system = '"
+                . $param['password'] . "'");
         if (count($user) == 0) {
             $this->view->errors[] = 'Password is changed';
         }
     }
 
-    public function activeApiAction() {
+    public function apiActiveAction() {
         $this->_helper->layout()->disableLayout();
         $param = $this->_arrParam;
-        $users = $this->_model->fetchAll("password_by_system = '" . md5($param['password']) . "'");
+        if (!key_exists('password', $param)) {
+            $this->view->result = json_encode(array('status' => 0,
+                'message' => 'Thiếu tham số password'));
+        }
+        $users = $this->_model->fetchAll("password_by_system = '"
+                . md5($param['password']) . "'");
         if (count($users) == 0) {
             $this->view->result = json_encode(array('status' => 2,
-                'message' => 'Tài khoản đã đước kích hoạt trước đó'));
+                'message' => 'Tài khoản không tồn tại hoặc đã đước kích hoạt trước đó'));
         } else {
-            $this->view->result = json_encode(array('status' => 1));
+            $this->view->result = json_encode(array('status' => 1, 'id' => $users[0]['id']));
         }
     }
 
-    public function updatePasswordApiAction() {
+    public function apiUpdatePasswordAction() {
         $this->_helper->layout()->disableLayout();
         $param = $this->_arrParam;
-        $users = $this->_model->fetchAll("password_by_system = '" . md5($param['current_password']) . "'");
+        if (!key_exists('current_password', $param)) {
+            $this->view->result = json_encode(array('status' => 0,
+                'message' => 'Thiếu tham số current password'));
+        }
+
+        if (!key_exists('password', $param)) {
+            $this->view->result = json_encode(array('status' => 0,
+                'message' => 'Thiếu tham số password'));
+        }
+
+        if (!key_exists('id', $param)) {
+            $this->view->result = json_encode(array('status' => 0,
+                'message' => 'Thiếu tham số ID'));
+        }
+
+        $users = $this->_model->find($param['id']);
         if (count($users) == 0) {
             $this->view->result = json_encode(array('status' => 2,
-                'message' => 'Tài khoản đã đước kích hoạt trước đó'));
-        } else {
-            $params = array('id' => $users[0]['id'], 'password_by_system' => NULL, 'password' => md5($param['password']));
-            $this->_model->save($params);
-            $this->view->result = json_encode(array('status' => 1));
+                'message' => 'Tài khoản không tồn tại'));
+            return;
         }
+        $user = $users[0];
+        if ($user['password_by_system'] != md5($param['current_password'])) {
+            $this->view->result = json_encode(array('status' => 2,
+                'message' => 'Tài khoản đã được kích hoạt trước đó'));
+            return;
+        }
+        $params = array('id' => $user['id'],
+            'password_by_system' => NULL,
+            'password' => md5($param['password']));
+        $this->_model->save($params);
+        $this->view->result = json_encode(array('status' => 1));
+    }
+
+    public function apiLoginAction() {
+        $this->_helper->layout()->disableLayout();
+        $param = $this->_arrParam;
+        $password = NULL;
+        $key = 'email';
+        $value = NULL;
+
+        if (key_exists('password', $param)) {
+            $password = $param['password'];
+        }
+
+        if (key_exists('email', $param)) {
+            $key = 'email';
+        }
+
+        if (key_exists('telephone', $param)) {
+            $key = 'telephone';
+        }
+
+        if (key_exists($key, $param)) {
+            $value = $param[$key];
+        }
+
+        if ($password == NULL || $value == NULL) {
+            $this->view->result = json_encode(array('status' => 0,
+                'message' => 'Bạn phải nhập đầy đủ các trường yêu cầu'));
+            return;
+        }
+        $users = $this->_model->fetchAll("password = '"
+                . md5($param['password']) . "' and $key = '$value'");
+        if (count($users) == 0) {
+            $this->view->result = json_encode(array('status' => 0,
+                'message' => "$key sai hoăc password sai"));
+            return;
+        }
+        $user = $users[0];
+        $session = $this->_model->generateRandomString();
+        $this->view->result = json_encode(array('status' => 1,
+            'user' => array(
+                'id' => $user['id'],
+                'name' => $user['name'],
+                'type' => $user['type'],
+                'session' => $session
+        )));
+        $this->_model->save(array('id' => $user['id'], 'session' => md5($session)));
     }
 
     public function loginAction() {
         $param = $this->_arrParam;
         if (key_exists('email', $param) && key_exists('password', $param)) {
-            $user = $this->_model->fetchAll("password = '" . md5($param['password']) . "' and email= '" . $param['email'] . "'");
+            $user = $this->_model->fetchAll("password = '"
+                    . md5($param['password']) . "' and email= '"
+                    . $param['email'] . "'");
             if (count($user) == 0) {
                 $this->view->errors[] = 'Email hoặc password is not correct!';
             } else {
@@ -245,7 +326,9 @@ class UserController extends Amobi_Controller_Action {
 
         $fullBaseUrl = "http://tratienviet.vn";
         $html = 'Your account has been created and is awaiting activation, please click the ';
-        $html .= '<a href="' . $fullBaseUrl . '/user/resetpassword?password=' . $md5 . '">Link</a> to activate<br>';
+        $html .= '<a href="' . $fullBaseUrl
+                . '/user/resetpassword?password='
+                . $md5 . '">Link</a> to activate<br>';
         $html .= 'Your password: ' . $password . '<br>';
         $html .= '<strong>Thanks!</strong>';
         return $html;

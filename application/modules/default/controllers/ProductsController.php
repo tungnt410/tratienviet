@@ -5,6 +5,7 @@ class ProductsController extends Amobi_Controller_Action {
     private $_status;
 
     public function init() {
+        $this->_action_non_auth = array('api-hot');
         parent::init();
         Zend_Loader::loadClass('Model_Product');
         $this->_model = new Model_Product();
@@ -95,24 +96,24 @@ class ProductsController extends Amobi_Controller_Action {
         }
     }
 
-    public function hotAction() {
+    public function apiHotAction() {
         $this->_helper->layout()->disableLayout();
         $params = $this->_arrParam;
         $category_id = 0;
-        if(isset($params['category_id'])){
+        if (isset($params['category_id'])) {
             $category_id = $params['category_id'];
         }
         $_products = $this->_model->fetchByCategory(3, $category_id);
-        
+
         $products = array();
         foreach ($_products as $value) {
-            $product = array();
-            $product['id'] = $value['id'];
-            $product['name'] = $value['name'];
-            $product['description'] = $value['description'];
+            $product = $value;
+            unset($product['created_at']);
+            unset($product['updated_at']);
+            unset($product['user_id']);
+            unset($product['status']);
             $imgs = explode("|", $value['images']);
             $product['images'] = $imgs;
-            $product['price'] = $value['price'];
             $products[] = $product;
         }
         $this->view->result = json_encode($products);
