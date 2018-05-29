@@ -44,9 +44,10 @@ class AdminController extends Amobi_Controller_Action {
 		$this->view->users = $this->_model->fetchAll();
 	}
 
-	public function papersAction(){
+	public function showAction(){
 
 	}
+
 
 	public function createUserAction() {
 		$this->_helper->layout()->disableLayout();

@@ -1,49 +1,83 @@
-<div class="container container-products">
-	<form class="form-horizontal" method="post" action="/products/update" enctype="multipart/form-data">
-		<input type="hidden" name="id" value="<?php echo $this->products['id']; ?>">
-		<h2>Thay đổi thông tin sản phẩm</h2>
-		<div class="form-group">
-			<label class="control-label col-sm-3" for="name">Tên sản phẩm:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="name" name="name" required value="<?php echo $this->products['name']; ?>">
+<div class="container">
+	<div class="col-lg-3 col-md-3 col-sm-3 col-sx-12 menuAdmin">
+		<ul><a href="" ><span class="glyphicon glyphicon-home"></span> Home</a>
+			<li><a href="/clubs/show">Thông tin CLB mới</a></li>
+			<li><a href="/products/show">Thông tin sản phẩm & dịch vụ</a></li>
+			<li><a href="/admin/show">Thông báo từ VFTek</a></li>
+		</ul>
+		<ul><a href="" class=""><span class="glyphicon glyphicon-user"></span> Quản trị người dùng</a>
+			<li><a href="/user/">Danh sách người dùng</a></li>
+		</ul>
+		<ul><a href="" class=""><span class="fa fa-group"></span> Quản trị CLB</a>
+			<li><a href="/clubs/new">Thêm CLB mới</a></li>
+			<li><a href="/clubs/">Danh sách CLB</a></li>
+		</ul>
+		<ul><a href="" class=""><span class="fa fa-product-hunt"></span> Quản trị sản phẩm</a>
+			<li><a href="/products/new">Thêm sản phẩm mới</a></li>
+			<li><a href="/products/">Danh sách sản phẩm</a></li> 
+		</ul>
+		<ul><a href="" class=""><span class="fa fa-product-hunt"></span> Quản trị cửa hàng</a>
+			<li><a href="/store/new">Thêm cửa hàng mới</a></li>
+			<li><a href="/store/">Danh sách cửa hàng</a></li> 
+		</ul>
+		<ul><a href="" class=""><span class="glyphicon glyphicon-cog"></span> Cài đặt</a>
+			<li><a href="">xxx</a></li>
+			<li><a href="">xxx</a></li>
+		</ul>
+		<ul><a href="" class="">VOC</a>
+			<li><a href="">Gửi phản hồi</a></li>
+			<li><a href="">Danh sách phản hồi của bạn</a></li>
+		</ul>
+	</div>
+	<div class="col-lg-9 col-md-9 col-sm-9 col-sx-12 contentAdmin">
+		<form class="form-horizontal" method="post" action="/products/update" enctype="multipart/form-data">
+			<input type="hidden" name="id" value="<?php echo $this->products['id']; ?>">
+			<h3>Thay đổi thông tin sản phẩm</h3>
+			<div class="form-group">
+				<label class="control-label col-sm-3" for="name">Tên sản phẩm:</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="name" name="name" required value="<?php echo $this->products['name']; ?>">
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label class="control-label col-sm-3" for="description">Mô tả sản phẩm:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="description" name="description" value="<?php echo $this->products['description']; ?>">
+			<div class="form-group">
+				<label class="control-label col-sm-3" for="description">Mô tả sản phẩm:</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="description" name="description" value="<?php echo $this->products['description']; ?>">
+				</div>
 			</div>
-		</div>
-		<div class="form-group">
-			<label class="control-label col-sm-3" for="images">Ảnh sản phẩm:</label>
-			<div class="col-sm-9">
-				<input type="file" accept="image/png, image/jpeg, image/gif" id="images" name="image"/>
+			<div class="form-group">
+				<label class="control-label col-sm-3" for="images">Ảnh sản phẩm:</label>
+				<div class="col-sm-9">
+					<input type="file" accept="image/png, image/jpeg, image/gif" id="images" name="image"/>
+				</div>
 			</div>
-		</div>
 
-		<div class="form-group">
-			<label class="control-label col-sm-3" for="price">Giá sản phẩm:</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="price" name="price" required value="<?php echo $this->products['price']; ?>">
+			<div class="form-group">
+				<label class="control-label col-sm-3" for="price">Giá sản phẩm:</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="price" name="price" required value="<?php echo $this->products['price']; ?>">
+				</div>
 			</div>
-		</div>
-		<hr>
-		<h2>Quản lý sản phẩm</h2>
-		<?php if($_SESSION['type'] == 2):?>
-			<?php if($this->products['status'] == 1):?>
-				<td><button class="btn btn-danger " type="submit" name="status" value="0" onclick="return confirm('Ngừng đăng sản phẩm này?')">Ngừng đăng sản phẩm</button></td>
+			<hr>
+			<h2>Quản lý sản phẩm</h2>
+			<?php if($_SESSION['type'] == 2):?>
+				<?php if($this->products['status'] == 1):?>
+					<td><button class="btn btn-danger " type="submit" name="status" value="0" onclick="return confirm('Ngừng đăng sản phẩm này?')">Ngừng đăng sản phẩm</button></td>
+				<?php endif;?>
+				<?php if($this->products['status'] == 0):?>
+					<td><button class="btn btn-primary" type="submit" name="status" value="1" onclick="return confirm('Đăng sản phẩm này?')">Đăng sản phẩm</button></td>
+				<?php endif;?>
 			<?php endif;?>
-			<?php if($this->products['status'] == 0):?>
-				<td><button class="btn btn-primary" type="submit" name="status" value="1" onclick="return confirm('Đăng sản phẩm này?')">Đăng sản phẩm</button></td>
-			<?php endif;?>
-		<?php endif;?>
-		<div class="form-group"> 
-			<div class="col-sm-12">
-				<button type="submit" class="btn btn-success center-block">THAY ĐỔI</button>
+			<div class="form-group"> 
+				<div class="col-sm-12">
+					<button type="submit" class="btn btn-success center-block">THAY ĐỔI</button>
+				</div>
 			</div>
-		</div>
-	</form>
+		</form>
+	</div>
 </div>
+
+
 <div id="updated_content" style="display: none;"><?php echo $this->updated_content; ?></div>
 <script type="text/javascript">
 	var content = $('#updated_content').text().replace(/\|/g, '\n');		

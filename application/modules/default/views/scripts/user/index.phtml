@@ -1,34 +1,67 @@
-<div class="container container-products">
-    <h1>Danh sách người dùng</h1>
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Tên</th>
-                <th>Email</th>
-                <th>Số điện thoại</th>
-                <th>Quyền hạn</th>
-                <th>Trạng thái</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            $order = 1;
-            foreach ($this->users as $user):
-                ?>
-                <tr id="user-<?php echo $user['id']; ?>">
-                    <td><?php echo $order++; ?></td>
-                    <td class="id"><?php echo $user['id']; ?></td>
-                    <td class="name title"><?php echo $user['name']; ?></td>
-                    <td class="email"><a href="mailto:<?php echo $user['email']; ?>"><?php echo $user['email']; ?></a></td>
-                    <td class="telephone"><?php echo $user['telephone']; ?></td>
-                    <td class="type"><?php echo $user['type']; ?></td>
-                    <td class="act"><?php echo $user['active']; ?></td>
-                    <td><a class="btn btn-primary" href="/user/edit?id=<?php echo $user['id']; ?>">Quản lý người dùng</a></td>
+<div class="container">
+    <?php if($this->user['type'] == 2):?>
+        <ul><a href="" ><span class="glyphicon glyphicon-home"></span> Home</a>
+            <li><a href="/clubs/show">Thông tin CLB mới</a></li>
+            <li><a href="/products/show">Thông tin sản phẩm & dịch vụ</a></li>
+            <li><a href="/admin/show">Thông báo từ VFTek</a></li>
+        </ul>
+        <ul><a href="" class=""><span class="glyphicon glyphicon-user"></span> Quản trị người dùng</a>
+            <li><a href="/user/">Danh sách người dùng</a></li>
+        </ul>
+        <ul><a href="" class=""><span class="fa fa-group"></span> Quản trị CLB</a>
+            <li><a href="/clubs/new">Thêm CLB mới</a></li>
+            <li><a href="/clubs/">Danh sách CLB</a></li>
+        </ul>
+        <ul><a href="" class=""><span class="fa fa-product-hunt"></span> Quản trị sản phẩm</a>
+            <li><a href="/products/new">Thêm sản phẩm mới</a></li>
+            <li><a href="/products/">Danh sách sản phẩm</a></li> 
+        </ul>
+        <ul><a href="" class=""><span class="fa fa-product-hunt"></span> Quản trị cửa hàng</a>
+            <li><a href="/store/new">Thêm cửa hàng mới</a></li>
+            <li><a href="/store/">Danh sách cửa hàng</a></li> 
+        </ul>
+        <ul><a href="" class=""><span class="glyphicon glyphicon-cog"></span> Settings</a>
+            <li><a href="">xxx</a></li>
+            <li><a href="">xxx</a></li>
+        </ul>
+        <ul><a href="" class="">VOC</a>
+            <li><a href="">Gửi phản hồi</a></li>
+            <li><a href="">Danh sách phản hồi của bạn</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-sx-12 contentAdmin">
+        <h3>Danh sách người dùng</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Quyền hạn</th>
+                    <th>Trạng thái</th>
+                    <th></th>
+                    <th></th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php
+                $order = 1;
+                foreach ($this->users as $user):
+                    ?>
+                    <tr id="user-<?php echo $user['id']; ?>">
+                        <td><?php echo $order++; ?></td>
+                        <td class="id"><?php echo $user['id']; ?></td>
+                        <td class="name title"><?php echo $user['name']; ?></td>
+                        <td class="email"><a href="mailto:<?php echo $user['email']; ?>"><?php echo $user['email']; ?></a></td>
+                        <td class="telephone"><?php echo $user['telephone']; ?></td>
+                        <td class="type"><?php echo $user['type']; ?></td>
+                        <td class="act"><?php echo $user['status']; ?></td>
+                        <td><a class="btn btn-primary" href="/user/edit?id=<?php echo $user['id']; ?>">Quản lý người dùng</a></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </div>
+

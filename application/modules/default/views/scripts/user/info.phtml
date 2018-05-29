@@ -1,9 +1,32 @@
-<div class="container container-products">
-	<tr id="user-<?php echo $this->user['id']; ?>" class="<?php echo $this->class; ?>">
-		<td class="order"><?php echo $this->order; ?></td>
-		<td class="id"><?php echo $this->user['id']; ?></td>
-		<td class="name title"><?php echo $this->user['name']; ?></td>
-		<td class="email"><?php echo $this->user['email']; ?></td>
-		<td><a href="#edit" class="edit_object">Edit</a> <a href="#remove" class="remove_object">Remove</a></td>
-	</tr>
+<div class="col-lg-3 col-md-3 col-sm-3 col-sx-12 menuAdmin">
+	<?php if($this->user['type'] == 2):?>
+		<ul><a href="" ><span class="glyphicon glyphicon-home"></span> Home</a>
+			<li><a href="">Thông tin CLB mới</a></li>
+			<li><a href="">Thông tin sản phẩm & dịch vụ</a></li>
+			<li><a href="">Thông báo từ VFTek</a></li>
+		</ul>
+		<ul><a href="" class=""><span class="glyphicon glyphicon-user"></span> Quản trị người dùng</a>
+			<li><a href="/user/">Danh sách người dùng</a></li>
+		</ul>
+		<ul><a href="" class=""><span class="fa fa-group"></span> Quản trị CLB</a>
+			<li><a href="/clubs/new">Thêm CLB mới</a></li>
+			<li><a href="/clubs/">Danh sách CLB</a></li>
+		</ul>
+		<ul><a href="" class=""><span class="fa fa-product-hunt"></span> Quản trị sản phẩm</a>
+			<li><a href="/products/new">Thêm sản phẩm mới</a></li>
+			<li><a href="/products/">Danh sách sản phẩm</a></li> 
+		</ul>
+		<ul><a href="" class=""><span class="fa fa-product-hunt"></span> Quản trị sản phẩm</a>
+			<li><a href="/store/new">Thêm sản phẩm mới</a></li>
+			<li><a href="/store/">Danh sách sản phẩm</a></li> 
+		</ul>
+		<ul><a href="" class=""><span class="glyphicon glyphicon-cog"></span> Settings</a>
+			<li><a href="">xxx</a></li>
+			<li><a href="">xxx</a></li>
+		</ul>
+		<ul><a href="" class="">VOC</a>
+			<li><a href="">Gửi phản hồi</a></li>
+			<li><a href="">Danh sách phản hồi của bạn</a></li>
+		</ul>
+	<?php endif;?>
 </div>

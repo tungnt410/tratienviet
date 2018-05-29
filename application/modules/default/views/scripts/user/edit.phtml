@@ -1,3 +1,5 @@
+
+
 <div class="container container-products">
     <form class="form-horizontal" method="post" action="/user/update">
         <input type="hidden" name="id" value="<?php echo $this->user['id']; ?>">
@@ -36,11 +38,11 @@
             <?php if($this->user['type'] == 3):?>
                 <td><button class="btn btn-success" type="submit" name="type" value="1" onclick="return confirm('Đồng ý cho người dùng này thành Chủ câu lạc bộ?')">Cấp quyền Chủ câu lạc bộ</button></td>
             <?php endif;?>
-            <?php if($this->user['active'] == 1):?>
-                <td><button class="btn btn-danger" type="submit" name="user[active]" value="0" onclick="return confirm('Bạn muốn khóa tài khoản này?')">Khóa tài khoản</button></td>
+            <?php if($this->user['status'] == 1):?>
+                <td><button class="btn btn-danger" type="submit" name="status" value="0" onclick="return confirm('Bạn muốn khóa tài khoản này?')">Khóa tài khoản</button></td>
             <?php endif;?>
-            <?php if($this->user['active'] == 0):?>
-                <td><button class="btn btn-primary" type="submit" name="user[active]" value="1" onclick="return confirm('Bạn muốn mở khóa tài khoản này?')">Mở khóa tài khoản</button></td>
+            <?php if($this->user['status'] == 0):?>
+                <td><button class="btn btn-primary" type="submit" name="status" value="1" onclick="return confirm('Bạn muốn mở khóa tài khoản này?')">Mở khóa tài khoản</button></td>
             <?php endif;?>
         <?php endif;?>
         <hr>
