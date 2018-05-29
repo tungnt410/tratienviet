@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2018 at 04:36 PM
+-- Generation Time: May 29, 2018 at 05:14 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -36,7 +36,7 @@ CREATE TABLE `bill` (
   `status` int(11) NOT NULL,
   `cost` int(11) NOT NULL,
   `pay` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -68,15 +68,8 @@ CREATE TABLE `club` (
   `images` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `club`
---
-
-INSERT INTO `club` (`id`, `name`, `slug`, `description`, `active`, `priority`, `images`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Clb cafe', 'cafe', 'Câu lạc bộ cafe', 1, 1, 'http://chiasethanhcong.net/wp-content/uploads/2016/10/mo-quan-cafe.png', 6, '2018-05-29 04:57:45', '2018-05-29 04:57:45');
 
 -- --------------------------------------------------------
 
@@ -89,7 +82,7 @@ CREATE TABLE `club_category` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `slug` varchar(90) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -103,7 +96,7 @@ CREATE TABLE `club_category_has_club` (
   `club_category_id` int(11) NOT NULL,
   `club_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -118,13 +111,6 @@ CREATE TABLE `club_has_product` (
   `product_id` int(11) NOT NULL,
   `priority` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `club_has_product`
---
-
-INSERT INTO `club_has_product` (`id`, `club_id`, `product_id`, `priority`) VALUES
-(1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -141,7 +127,7 @@ CREATE TABLE `club_has_user` (
   `status` int(11) NOT NULL DEFAULT '0',
   `percent` double NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -172,7 +158,7 @@ CREATE TABLE `pay_history_by_day` (
   `amount` double NOT NULL,
   `payed` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -191,15 +177,8 @@ CREATE TABLE `product` (
   `status` tinyint(1) NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `product`
---
-
-INSERT INTO `product` (`id`, `name`, `slug`, `description`, `images`, `price`, `status`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Cafe Birdy', 'cafe-birdy', '', 'https://giacaphe.com/wp-content/uploads/2009/08/Birdy1.gif', 12000, 3, 6, '2018-05-29 05:00:32', '2018-05-29 05:00:32');
 
 -- --------------------------------------------------------
 
@@ -212,15 +191,8 @@ CREATE TABLE `product_category` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `slug` varchar(90) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `product_category`
---
-
-INSERT INTO `product_category` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'cafe', 'cafe', '2018-05-29 04:58:50', '2018-05-29 04:58:50');
 
 -- --------------------------------------------------------
 
@@ -233,7 +205,7 @@ CREATE TABLE `product_category_has_product` (
   `product_category_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -253,7 +225,7 @@ CREATE TABLE `product_history` (
   `status` int(11) NOT NULL,
   `club_id` int(11) NOT NULL,
   `user_id_change` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -268,7 +240,7 @@ CREATE TABLE `rule_of_club` (
   `level` int(11) NOT NULL,
   `percent` double NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -298,7 +270,7 @@ CREATE TABLE `store` (
   `adress` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -336,16 +308,9 @@ CREATE TABLE `user` (
   `password_by_system` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` tinyint(1) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL,
   `session` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `name`, `email`, `telephone`, `adress`, `type`, `password`, `password_by_system`, `status`, `created_at`, `updated_at`, `session`) VALUES
-(6, 'Yin X\\', 'tungxbk@gmail.com', '01649782883', '', 0, 'e10adc3949ba59abbe56e057f20f883e', '', 0, '2018-05-29 04:43:44', '2018-05-29 04:43:44', NULL);
 
 --
 -- Indexes for dumped tables
@@ -486,7 +451,7 @@ ALTER TABLE `bill_has_product`
 -- AUTO_INCREMENT for table `club`
 --
 ALTER TABLE `club`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `club_category`
 --
@@ -501,7 +466,7 @@ ALTER TABLE `club_category_has_club`
 -- AUTO_INCREMENT for table `club_has_product`
 --
 ALTER TABLE `club_has_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `club_has_user`
 --
@@ -521,12 +486,12 @@ ALTER TABLE `pay_history_by_day`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `product_category`
 --
 ALTER TABLE `product_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `product_category_has_product`
 --
@@ -561,7 +526,7 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
