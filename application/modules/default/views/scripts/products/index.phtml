@@ -1,41 +1,71 @@
-<div class="container container-products">
-<h1>
-    Danh sách sản phẩm
-</h1>
-
-<div class="row"></div>
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Tên sản phẩm</th>
-            <th>Mô tả</th>
-            <th>Ảnh sản phẩm</th>
-            <th>Giá</th>
-            <th>Trạng thái</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        $order = 1;
-        foreach ($this->products as $product):
-            ?>
-            <tr id="product-<?php echo $products['id']; ?>">
-                <td><?php echo $order++; ?></td>
-                <td class="id"><?php echo $product['id']; ?></td>
-                <td class="name"><a href="/products/edit?id=<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a></td>
-                <td class="description"><?php echo $product['description']; ?></td>
-                <td class="image" style="width: 150px;"><?php echo "<img src='" . $product['images'] . "' alt='Chưa có ảnh'>";?></td>
-                <td class="price"><?php echo $product['price']; ?></td>
-                <td class="status"><?php echo $product['status']; ?></td>
-                <td><a class="btn btn-primary" href="/products/edit?id=<?php echo $product['id']; ?>">Thông tin sản phẩm</a> <a href="#remove" class="remove_object btn btn-danger">Xóa sản phẩm</a></td>
-            </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+<div class="container">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-sx-12 menuAdmin">
+        <ul><a href="" ><span class="glyphicon glyphicon-home"></span> Home</a>
+            <li><a href="/clubs/show">Thông tin CLB mới</a></li>
+            <li><a href="/products/show">Thông tin sản phẩm & dịch vụ</a></li>
+            <li><a href="/admin/show">Thông báo từ VFTek</a></li>
+        </ul>
+        <ul><a href="" class=""><span class="glyphicon glyphicon-user"></span> Quản trị người dùng</a>
+            <li><a href="/user/">Danh sách người dùng</a></li>
+        </ul>
+        <ul><a href="" class=""><span class="fa fa-group"></span> Quản trị CLB</a>
+            <li><a href="/clubs/new">Thêm CLB mới</a></li>
+            <li><a href="/clubs/">Danh sách CLB</a></li>
+        </ul>
+        <ul><a href="" class=""><span class="fa fa-product-hunt"></span> Quản trị sản phẩm</a>
+            <li><a href="/products/new">Thêm sản phẩm mới</a></li>
+            <li><a href="/products/">Danh sách sản phẩm</a></li> 
+        </ul>
+        <ul><a href="" class=""><span class="fa fa-product-hunt"></span> Quản trị cửa hàng</a>
+            <li><a href="/store/new">Thêm cửa hàng mới</a></li>
+            <li><a href="/store/">Danh sách cửa hàng</a></li> 
+        </ul>
+        <ul><a href="" class=""><span class="glyphicon glyphicon-cog"></span> Settings</a>
+            <li><a href="">xxx</a></li>
+            <li><a href="">xxx</a></li>
+        </ul>
+        <ul><a href="" class="">VOC</a>
+            <li><a href="">Gửi phản hồi</a></li>
+            <li><a href="">Danh sách phản hồi của bạn</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-sx-12 contentAdmin">
+        <h3>Danh sách sản phẩm</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Mô tả</th>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Trạng thái</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $order = 1;
+                foreach ($this->products as $product):
+                    ?>
+                    <tr id="product-<?php echo $products['id']; ?>">
+                        <td><?php echo $order++; ?></td>
+                        <td class="id"><?php echo $product['id']; ?></td>
+                        <td class="name"><a href="/products/edit?id=<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a></td>
+                        <td class="description"><?php echo $product['description']; ?></td>
+                        <td class="image" style="width: 150px;"><?php echo "<img src='" . $product['images'] . "' alt='Chưa có ảnh'>";?></td>
+                        <td class="price"><?php echo $product['price']; ?></td>
+                        <td class="status"><?php echo $product['status']; ?></td>
+                        <td><a class="btn btn-primary" href="/products/edit?id=<?php echo $product['id']; ?>">Thông tin sản phẩm</a> <a href="#remove" class="remove_object btn btn-danger">Xóa sản phẩm</a></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </div>
+
+
 <?php
 echo $this->partial("layout/modal_info.phtml", array('title' => 'Upload product', 'action' => '/product/',
     'fields' => array('name' => array('type' => 'fileUpload', 'option' => 'product')),

@@ -81,11 +81,7 @@ class ProductsController extends Amobi_Controller_Action {
     }
 
     public function showAction() {
-        $this->_helper->layout()->disableLayout();
-        $param = $this->_arrParam;
-        $products = $this->_model->find($param['id']);
-        Zend_Loader::loadClass('Model_User');
-        $userModel = new Model_User();
+        
     }
 
     public function destroyAction() {
